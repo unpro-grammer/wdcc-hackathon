@@ -10,7 +10,7 @@ const Home = () => {
     <div className="main-home">
       <div className="home-container">
         <div className="home-contents">
-          <h1>Order food out of this world here:</h1>
+          <h1>Order bites out of this world here:</h1>
           <form className="search-form">
             <input type="text" placeholder="Search for food..." className="search-input" />
             <button type="submit" className="search-button">Search</button>
@@ -31,7 +31,6 @@ const Home = () => {
           </div>
           <h3>Earth Food</h3>
           <p>Nostalgic food that makes you feel at home</p>
-
         </div>
         <div className="nav-card">
           <div className="imgWrapper">
@@ -41,7 +40,7 @@ const Home = () => {
           <p>New and exciting eats</p>
         </div>
       </div>
-      <h2>Galaxy Map</h2>
+      <h2>Find bites near you:</h2>
       <div className="planet-map">
         <img src={galaxymap} alt="Space Bites Logo" />
       </div>
