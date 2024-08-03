@@ -15,7 +15,7 @@ function CartPage() {
     const { cartItems, setCartItems } = useContext(CartContext);
 
     const handleRemoveItem = (item) => {
-        setCartItems((prevItems) => prevItems.filter((i) => i !== item));
+        setCartItems((prevItems) => prevItems.filter((i) => i.id !== item.id));
     };
 
     const calculateTotal = () => {
