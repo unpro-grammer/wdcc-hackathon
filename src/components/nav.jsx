@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from '../styles/nav.module.css';
 import React from 'react';
-import logo from '../resources/images/logo.png';
+import logo from '../resources/images/navlogo.png';
 
 
 function Navbar() {

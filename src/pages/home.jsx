@@ -1,5 +1,4 @@
 import React from 'react';
-import backgroundImg from '../resources/images/tempBackgroundImg.jpg';
 import localfood from '../resources/images/localfood.jpg';
 import earthfood from '../resources/images/earthfood.jpg';
 import interstellarfood from '../resources/images/interstellarfood.jpg';
@@ -11,9 +10,8 @@ const Home = () => {
     <div className="main-home">
       <div className="home-container">
         <div className="home-contents">
-          <h1>Welcome to Space Bites</h1>
-          <h2>Out of this world flavour!</h2>
-          <p>Space Bites is the best place to get your snacks! We have a wide variety of snacks to choose from, all with a unique space theme. Our snacks are out of this world!</p>
+          <h1>Order food out of this world here:</h1>
+
         </div>
       </div>
       <div className="nav-cards">
