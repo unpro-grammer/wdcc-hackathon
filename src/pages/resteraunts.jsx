@@ -18,10 +18,10 @@ function RestaurantPage() {
     return (
         <div className="simple-page">
             <h1>That One Restaurant</h1>
-            
+
             <div className="blocks-container scrollable">
                 {blocks1.map((block, index) => (
-                    <a href={block.link} key={index} className="block">
+                    <a href={block.link} key={index} className="block1">
                         <div>
                             <img src={block.imgSrc} alt={`Block ${index + 1}`} />
                         </div>
