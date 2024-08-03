@@ -1,84 +1,108 @@
 .simple-page {
-    text-align: center;
+  text-align: center;
 }
 
 .blocks-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    /* centre text */
-    text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  /* centre text */
+  text-align: center;
+  padding-bottom: 30px;
 }
+
 .scrollable {
-    max-height: 200px; /* Adjust the height as needed */
-    overflow-x: auto;
-    overflow-y: hidden; /* Hide vertical scrollbar */
-    white-space: nowrap;
+  max-height: 200px;
+  /* Adjust the height as needed */
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* Hide vertical scrollbar */
+  white-space: nowrap;
+  padding-bottom: 30px;
 }
 
 .block {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 10px; /* Adjust spacing between blocks as needed */
-    width: 200px;
-    height: 200px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    text-decoration: none;
-    background-color: #ffffff;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  /* Adjust spacing between blocks as needed */
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: #ffffff;
+  padding-bottom: 30px;
 }
 
 /* Custom scrollbar styles */
 .scrollable::-webkit-scrollbar {
-    height: 12px; /* Adjust the height of the scrollbar */
+  height: 12px;
+  /* Adjust the height of the scrollbar */
 }
 
 .scrollable::-webkit-scrollbar-track {
-    background: #fbfaff; /* Background of the scrollbar track */
-    border-radius: 10px;
+  background: #fbfaff;
+  /* Background of the scrollbar track */
+  border-radius: 10px;
 }
 
 .scrollable::-webkit-scrollbar-thumb {
-    background: #efd6ff; /* Color of the scrollbar thumb */
-    border-radius: 10px;
+  background: #efd6ff;
+  /* Color of the scrollbar thumb */
+  border-radius: 10px;
 }
 
 .scrollable::-webkit-scrollbar-thumb:hover {
-    background: #d4b3ff; /* Color of the scrollbar thumb on hover */
+  background: #d4b3ff;
+  /* Color of the scrollbar thumb on hover */
 }
 
 
 
 .block img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* paragraph styling */
 p {
-    /* change text colour */
-    color: #000000;
-    margin: 0;
-    padding: 10px;
-    /* background-color: #b43636; */
-    color: #333;
-    /* make text show on left */
-    text-align: left;
-    /*change font*/
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
+  /* change text colour */
+  color: #000000;
+  margin: 0;
+  padding: 10px;
+  /* background-color: #b43636; */
+  color: #333;
+  /* make text show on left */
+  text-align: left;
+  /*change font*/
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 h2 {
-    /* 50px left padding */
-    padding-left: 50px;
-    text-align: left;
+  /* 50px left padding */
+  padding-left: 50px;
+  text-align: left;
 }
 
 /* change background colour */
 body {
-    background-color: #fbfaff;
+  background-color: #fbfaff;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }

@@ -1,11 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import '../styles/cart.css';
-import cheeseburger from '../resources/images/cheesburger.jpg'; // Corrected typo
-
-const blocks1 = [
-    { imgSrc: cheeseburger, link: 'https://google.com' },
-    // Add more blocks as needed
-];
+import cheeseburger from '../resources/images/cheesburger.jpg';
+import { CartContext } from './cartContext';
 
 const foodItems = [
     { imgSrc: cheeseburger, description: 'Delicious Cheeseburger', price: '$5.99' },
@@ -13,15 +9,31 @@ const foodItems = [
     { imgSrc: cheeseburger, description: 'Tasty Milkshake', price: '$3.99' },
     { imgSrc: cheeseburger, description: 'Scrumptious Salad', price: '$4.99' },
     { imgSrc: cheeseburger, description: 'Delightful Ice Cream', price: '$3.99' },
-    // Add more food items as needed
 ];
 
 function CartPage() {
-    const [items, setItems] = useState(foodItems);
+    const { cartItems, removeFromCart } = useContext(CartContext);
 
-    const handleRemoveItem = (item) => {
-        setItems(items.filter((i) => i !== item));
+    const handleRemoveItem = (itemId) => {
+        removeFromCart(itemId);
     };
+
+    const calculateTotal = () => {
+        const foodTotal = cartItems.reduce((total, item) => total + parseFloat(item.price.slice(1)), 0);
+        const serviceCharge = 200;
+        const deliveryCharge = 500;
+        const tax = foodTotal * 0.15;
+        const total = foodTotal + serviceCharge + deliveryCharge + tax;
+        return {
+            foodTotal: foodTotal.toFixed(2),
+            serviceCharge: serviceCharge.toFixed(2),
+            deliveryCharge: deliveryCharge.toFixed(2),
+            tax: tax.toFixed(2),
+            total: total.toFixed(2)
+        };
+    };
+
+    const totals = calculateTotal();
 
     return (
         <div className="simple-page">
@@ -31,28 +43,33 @@ function CartPage() {
                 <h2>Food Items</h2>
                 <div className='vertical-container'>
                     <ul className="food-items">
-                        {items.map((item, index) => (
+                        {cartItems.map((item, index) => (
+
                             <li key={index} className="food-item">
-                                <img src={item.imgSrc} alt={`Food Item ${index + 1}`} />
-                                <div className="item-details">
-                                    <p>{item.description}</p>
-                                    <p>{item.price}</p>
-                                </div>
-                                <button onClick={() => handleRemoveItem(item)}>X</button>
+                                <img src={item.imgSrc} alt={item.name} className='item-image' />
+                                <span className="item-name">{item.description}</span>
+                                <span className="item-price">{item.price}</span>
+                                <button className="remove-button" onClick={() => handleRemoveItem(item.id)}>X</button>
                             </li>
                         ))}
                     </ul>
                     <div className='price-info'>
                         <h3>Order breakdown:</h3>
                         <ul>
-                            <li>Food total: 3000η</li>
+                            <li>Food total: {totals.foodTotal}η</li>
                             <li>Service charge 200η</li>
                             <li>Delivery charge 500η</li>
                             <li>Tax (15%): 555η</li>
-                            <li>Total: 4255η</li>
                         </ul>
-                        <button id='CheckoutButton'>Checkout</button>
+                        <div className='email-input'>
+                            <label htmlFor="email">Enter your email:</label>
+                            <div><input type="email" id="email" name="email" placeholder="you@example.com" /></div>
+                        </div>
+                        <div className='confirm-button'>
+                            <button type="button" className='confirmation-button'>Confirm</button>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
