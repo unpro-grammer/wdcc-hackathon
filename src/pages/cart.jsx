@@ -12,10 +12,10 @@ const foodItems = [
 ];
 
 function CartPage() {
-    const { cartItems, setCartItems } = useContext(CartContext);
+    const { cartItems, removeFromCart } = useContext(CartContext);
 
-    const handleRemoveItem = (item) => {
-        setCartItems((prevItems) => prevItems.filter((i) => i.id !== item.id));
+    const handleRemoveItem = (itemId) => {
+        removeFromCart(itemId);
     };
 
     const calculateTotal = () => {
@@ -49,7 +49,7 @@ function CartPage() {
                                 <img src={item.imgSrc} alt={item.name} className='item-image' />
                                 <span className="item-name">{item.description}</span>
                                 <span className="item-price">{item.price}</span>
-                                <button className="remove-button" onClick={() => handleRemoveItem(item)}>X</button>
+                                <button className="remove-button" onClick={() => handleRemoveItem(item.id)}>X</button>
                             </li>
                         ))}
                     </ul>
