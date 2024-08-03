@@ -39,7 +39,6 @@
 ul li {
     list-style: none;
     font-size: 18px;
-    color: rgb(122, 87, 87);
     padding: 12px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
@@ -71,6 +70,7 @@ ul li {
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
+    margin-bottom: 40px;
 }
 
 .food-item1 img {
