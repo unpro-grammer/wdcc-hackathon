@@ -33,6 +33,7 @@
 
 .food-items-container {
     margin-top: 20px;
+    margin-right: 20px;
 }
 
 .food-items {
@@ -43,11 +44,28 @@
 
 .price-info{
     flex:  1;
+    /* align centre but vertically stacked*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin-left: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    text-decoration: none;
+       
 }
 .vertical-container {
     display: flex;
     justify-content: space-between;
     /* height: 100%; */
+    padding-left: 20px;
+    margin-left: 20px;
 }
 
 
@@ -55,7 +73,7 @@ ul li {
     list-style: none;
     font-size: 18px;
     color: rgb(122, 87, 87);
-    padding: 12px 8px 12px 50px;
+    padding: 20px 80px 20px 80px;
     user-select: none;
     cursor: pointer;
     position: relative;
@@ -123,4 +141,31 @@ ul li {
 
 .food-item button:hover {
     background-color: #7e1212;
+}
+
+
+.email-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.email-input input {
+    background-color: #ede3fd; /* Light blue background color */
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.confirmation-button {
+    padding: 10px;
+    margin-top: 100px;
+    background-color: #d7c6ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }

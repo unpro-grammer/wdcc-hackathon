@@ -61,7 +61,15 @@ function CartPage() {
                             <li>Delivery charge 500η</li>
                             <li>Tax (15%): 555η</li>
                         </ul>
+                        <div className='email-input'>
+                            <label htmlFor="email">Enter your email:</label>
+                            <div><input type="email" id="email" name="email" placeholder="you@example.com" /></div>
+                        </div>
+                        <div className='confirm-button'>
+                            <button type="button" className='confirmation-button'>Confirm</button>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
