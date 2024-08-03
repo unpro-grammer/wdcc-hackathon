@@ -1,4 +1,8 @@
 /* src/styles/cart.css */
+
+* {
+    color: black;
+}
 .simple-page {
     padding: 20px;
     font-family: Arial, sans-serif;
@@ -33,8 +37,19 @@
 
 .food-items {
     list-style: none;
+    width: 50%;
     padding: 0;
 }
+
+.price-info{
+    flex:  1;
+}
+.vertical-container {
+    display: flex;
+    justify-content: space-between;
+    /* height: 100%; */
+}
+
 
 ul li {
     list-style: none;
@@ -93,13 +108,17 @@ ul li {
 
 .food-item button {
     padding: 5px 10px;
-    background-color: #28a745;
+    background-color: #ff0000;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
+#CheckoutButton {
+    background-color: aquamarine;
+}
+
 .food-item button:hover {
-    background-color: #218838;
+    background-color: #7e1212;
 }
