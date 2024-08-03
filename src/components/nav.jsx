@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import  styles from '../styles/Navbar.module.css';
+import  styles from '../styles/navbar.module.css';
 import React from 'react';
 
 
@@ -21,28 +21,21 @@ function Navbar() {
     <div className="App">
       <header className="App-header">
 
-        <nav className={`${styles.navbar}`}>
+        <nav className={`${styles.navbar}` }>
 
           {/* logo */}
           <a href='./' className={`${styles.logo}`}>HOME. </a>
-
-          <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
-            <li onClick={removeActive}>
-              <a href='./' className={`${styles.navLink}`}>Home</a>
-            </li>
-            <li onClick={removeActive}>
-              <a href='/discover' className={`${styles.navLink}`}>Discover</a>
-            </li>
-            <li onClick={removeActive}>
-              <a href='/cart' className={`${styles.navLink}`}>Cart</a>
-            </li>
-          </ul>
-
-          <div className={`${styles.hamburger} ${isActive ? styles.active : ''}`}  onClick={toggleActiveClass}>
-            <span className={`${styles.bar}`}></span>
-            <span className={`${styles.bar}`}></span>
-            <span className={`${styles.bar}`}></span>
-          </div>
+                <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
+                    <li onClick={removeActive}>
+                    <a href='./' className={`${styles.navLink}`}>Home</a>
+                    </li>
+                    <li onClick={removeActive}>
+                    <a href='/discover' className={`${styles.navLink}`}>Discover</a>
+                    </li>
+                    <li onClick={removeActive}>
+                    <a href='/cart' className={`${styles.navLink}`}>Cart</a>
+                    </li>
+                </ul>
         </nav>
 
       </header>
