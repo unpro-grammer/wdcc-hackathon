@@ -1,6 +1,9 @@
 import React from 'react';
-import backgroundImg from '../tempBackgroundImg.jpg'; // Go up one directory level from src/pages
-import '../styles/home.css'; // Go up one directory level from src/pages
+import backgroundImg from '../resources/images/tempBackgroundImg.jpg';
+import localfood from '../resources/images/localfood.jpg';
+import earthfood from '../resources/images/earthfood.jpg';
+import interstellarfood from '../resources/images/interstellarfood.jpg';
+import '../styles/home.css';
 
 const Home = () => {
   return (
@@ -17,14 +20,27 @@ const Home = () => {
           </div>
           <div className="nav-cards">
             <div className="nav-card">
+              <div className="imgWrapper">
+                <img src={localfood} alt="Local Food" />
+              </div>
               <h3>Local Food</h3>
             </div>
             <div className="nav-card">
+              <div className="imgWrapper">
+                <img src={earthfood} alt="Earth Food" />
+              </div>
               <h3>Earth Food</h3>
             </div>
             <div className="nav-card">
+              <div className="imgWrapper">
+                <img src={interstellarfood} alt="Interstellar Food" />
+              </div>
               <h3>Interstellar Food</h3>
             </div>
+          </div>
+
+          <div className="planet-map">
+
           </div>
         </div>
       </body>
