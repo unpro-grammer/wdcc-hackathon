@@ -1,14 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import './index.css';
-import App from './App';
+import './discover.css'; // Import a CSS file for styling (optional)
 
-ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function DiscoverPage() {
+  return (
+    <div className="simple-page">
+      <h1>Hello, Welcome to My React Page!</h1>
+      <p>This is a simple page displaying some text.</p>
+    </div>
+    
+  );
+}
+
+export default DiscoverPage;
