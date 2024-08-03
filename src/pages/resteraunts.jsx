@@ -10,8 +10,6 @@ const blocks1 = [
     // Add more blocks as needed
 ];
 
-let count = 0;
-
 const foodItems = [
     { imgSrc: cheeseburger, description: 'Delicious Cheeseburger', price: '$5.99' },
     { imgSrc: cheeseburger, description: 'Yummy Fries', price: '$2.99' },
@@ -28,7 +26,7 @@ function RestaurantPage() {
     const navigate = useNavigate();
 
     const handleAddToCart = (item) => {
-        const newItem = { ...item, id: count++ };
+        const newItem = { ...item, id: Date.now() };
         addToCart(newItem);
         setNote('Added to cart');
         console.log(newItem);
