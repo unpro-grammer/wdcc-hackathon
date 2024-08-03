@@ -11,7 +11,10 @@ const Home = () => {
       <div className="home-container">
         <div className="home-contents">
           <h1>Order food out of this world here:</h1>
-
+          <form className="search-form">
+            <input type="text" placeholder="Search for food..." className="search-input" />
+            <button type="submit" className="search-button">Search</button>
+          </form>
         </div>
       </div>
       <div className="nav-cards">
@@ -40,6 +43,7 @@ const Home = () => {
       </div>
       <h2>Galaxy Map</h2>
       <div className="planet-map">
+        <img src={galaxymap} alt="Space Bites Logo" />
       </div>
     </div>
   );
