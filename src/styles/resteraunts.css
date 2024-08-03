@@ -1,0 +1,103 @@
+.simple-page {
+    text-align: center;
+}
+
+.blocks-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    /* centre text */
+    text-align: center;
+}
+.scrollable {
+    max-height: 200px; /* Adjust the height as needed */
+    overflow-x: auto;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    white-space: nowrap;
+}
+
+.block {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px; /* Adjust spacing between blocks as needed */
+    /* flexible width full page */
+    width: calc(100% - 20px);
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: #ffffff;
+}
+
+/* Custom scrollbar styles */
+.scrollable::-webkit-scrollbar {
+    height: 12px; /* Adjust the height of the scrollbar */
+}
+
+.scrollable::-webkit-scrollbar-track {
+    background: #fbfaff; /* Background of the scrollbar track */
+    border-radius: 10px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+    background: #efd6ff; /* Color of the scrollbar thumb */
+    border-radius: 10px;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+    background: #d4b3ff; /* Color of the scrollbar thumb on hover */
+}
+
+
+
+.block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.food-item img {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* paragraph styling */
+p {
+    /* change text colour */
+    color: #000000;
+    margin: 0;
+    padding: 10px;
+    /* background-color: #b43636; */
+    color: #333;
+    /* make text show on left */
+    text-align: left;
+    /*change font*/
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+h2 {
+    /* 50px left padding */
+    padding-left: 50px;
+    text-align: left;
+}
+
+/* change background colour */
+body {
+    background-color: #fbfaff;
+}
+
+.food-items {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping to keep items on one line */
+    overflow-x: auto; /* Add horizontal scrolling if needed */
+}
+
+.food-item {
+    display: inline-block;
+    margin-right: 20px; /* Space between items */
+    text-align: center;
+}

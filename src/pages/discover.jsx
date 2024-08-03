@@ -2,8 +2,13 @@ import React from 'react';
 import '../styles/discover.css';
 import cheeseburger from '../resources/images/cheesburger.jpg';
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './home'
+import Discover from './discover'
+import {Link} from 'react-router-dom'
+
 const blocks1 = [
-    { imgSrc: cheeseburger, link: 'https://google.com' },
+    { imgSrc: cheeseburger, link: '/restaurants' },
     { imgSrc: cheeseburger, link: 'https://google.com' },
     { imgSrc: cheeseburger, link: 'https://google.com' },
     { imgSrc: cheeseburger, link: 'https://google.com' },
@@ -22,7 +27,7 @@ function DiscoverPage() {
             
             <div className="blocks-container scrollable">
                 {blocks1.map((block, index) => (
-                    <a href={block.link} key={index} className="block">
+                    <Link to={block.link} key={index} className="block">
                         <div>
                             <img src={block.imgSrc} alt={`Block ${index + 1}`} />
                         </div>
@@ -31,7 +36,7 @@ function DiscoverPage() {
                         {index === 2 && <p style={{ textAlign: 'center' }}>Stellar Sushi</p>}
 
 
-                    </a>
+                    </Link>
 
                 ))}
             </div>
