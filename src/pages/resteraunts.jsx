@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-import '../styles/resteraunts.css';
+import React, { useState, useContext } from 'react';
+// import '../styles/cart.css';
+import '../styles/resteraunts.css'; // Corrected typo
 import cheeseburger from '../resources/images/cheesburger.jpg'; // Corrected typo
+import { CartContext } from './cartContext';
 
 const blocks1 = [
     { imgSrc: cheeseburger, link: 'https://google.com' },
@@ -18,6 +20,11 @@ const foodItems = [
 
 function RestaurantPage() {
     const [items, setItems] = useState(foodItems);
+    const { addToCart } = useContext(CartContext);
+
+    const handleAddToCart = (item) => {
+        addToCart(item);
+    };
 
     return (
         <div className="simple-page">
@@ -43,7 +50,7 @@ function RestaurantPage() {
                                 <p>{item.description}</p>
                                 <p>{item.price}</p>
                             </div>
-                            <button>Add to Cart</button>
+                            <button onClick={() => handleAddToCart(item)}>Add to Cart</button>
                         </li>
                     ))}
                 </ul>

@@ -36,7 +36,13 @@
     padding: 0;
 }
 
+ul {
+    width: 100%;
+}
+
 ul li {
+    /* make ul size full width */
+    width: 100%;
     list-style: none;
     font-size: 18px;
     color: rgb(122, 87, 87);
