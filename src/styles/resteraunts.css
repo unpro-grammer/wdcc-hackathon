@@ -27,11 +27,11 @@
     object-fit: cover;
 }
 
-.food-items-container {
+.food-items-container1 {
     margin-top: 20px;
 }
 
-.food-items {
+.food-items1 {
     list-style: none;
     padding: 0;
 }
@@ -48,10 +48,12 @@ ul li {
   
   ul li::before {
     content: '';
+    
     position: absolute;
     height: 28px;
     width: 28px;
     border-radius: 50%;
+    
     
     background-image: url(images/ring.jpg);
     background-size: cover;
@@ -62,7 +64,7 @@ ul li {
   
   }
 
-.food-item {
+.food-item1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -73,25 +75,25 @@ ul li {
     overflow: hidden;
 }
 
-.food-item img {
+.food-item1 img {
     width: 100px;
     height: 100px;
     object-fit: cover;
     margin-right: 15px;
 }
 
-.food-item .item-details {
+.food-item1 .item-details {
     flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.food-item p {
+.food-item1 p {
     margin: 0 15px;
 }
 
-.food-item button {
+.food-item1 button {
     padding: 5px 10px;
     background-color: #28a745;
     color: white;
@@ -100,6 +102,6 @@ ul li {
     cursor: pointer;
 }
 
-.food-item button:hover {
+.food-item1 button:hover {
     background-color: #218838;
 }

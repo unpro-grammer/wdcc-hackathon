@@ -33,13 +33,13 @@ function RestaurantPage() {
                 ))}
             </div>
 
-            <div className="food-items-container">
+            <div className="food-items-container1">
                 <h2>Food Items</h2>
-                <ul className="food-items">
+                <ul className="food-items1">
                     {items.map((item, index) => (
-                        <li key={index} className="food-item">
+                        <li key={index} className="food-item1">
                             <img src={item.imgSrc} alt={`Food Item ${index + 1}`} />
-                            <div className="item-details">
+                            <div className="item-details1">
                                 <p>{item.description}</p>
                                 <p>{item.price}</p>
                             </div>
