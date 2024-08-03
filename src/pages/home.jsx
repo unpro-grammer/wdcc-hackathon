@@ -1,33 +1,35 @@
-// src/Homepage.jsx
-import React from 'react'
-import '../styles/home.css'
+import React from 'react';
+import backgroundImg from '../tempBackgroundImg.jpg'; // Go up one directory level from src/pages
+import '../styles/home.css'; // Go up one directory level from src/pages
 
-const Homepage = () => {
+const Home = () => {
   return (
-    <div className="homepage">
-      <header className="homepage-header">
-        <h1>Welcome to Space Eats</h1>
-        <p>Your favorite meals delivered from the stars!</p>
-      </header>
-      <main className="homepage-main">
-        <section className="introduction">
-          <h2>About Us</h2>
-          <p>Space Eats brings the best cosmic cuisines right to your door. From moon pizzas to Martian burgers, we have it all!</p>
-        </section>
-        <section className="features">
-          <h2>Why Choose Us?</h2>
-          <ul>
-            <li>Fast and reliable space delivery</li>
-            <li>Wide variety of intergalactic dishes</li>
-            <li>Fresh ingredients from the outer space farms</li>
-          </ul>
-        </section>
-      </main>
-      <footer className="homepage-footer">
-        <p>&copy; 2024 Space Eats. All rights reserved.</p>
-      </footer>
-    </div>
-  )
-}
+    <html lang="en">
+      <body>
+        <div className="main-home">
+          <div className="home-container">
+            <image src={backgroundImg} alt="background image" className="home-background" />
+            <div className="home-contents">
+              <h1>Welcome to Space Bites</h1>
+              <h2>Out of this world flavour!</h2>
+              <p>Space Bites is the best place to get your snacks! We have a wide variety of snacks to choose from, all with a unique space theme. Our snacks are out of this world!</p>
+            </div>
+          </div>
+          <div className="nav-cards">
+            <div className="nav-card">
+              <h3>Local Food</h3>
+            </div>
+            <div className="nav-card">
+              <h3>Earth Food</h3>
+            </div>
+            <div className="nav-card">
+              <h3>Interstellar Food</h3>
+            </div>
+          </div>
+        </div>
+      </body>
+    </html>
+  );
+};
 
-export default Homepage
+export default Home;
