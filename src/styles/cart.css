@@ -1,0 +1,105 @@
+/* src/styles/cart.css */
+.simple-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.blocks-container {
+    display: flex;
+    overflow-x: scroll;
+    margin-bottom: 20px;
+}
+
+.block1 {
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.block1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.food-items-container {
+    margin-top: 20px;
+}
+
+.food-items {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    font-size: 18px;
+    color: rgb(122, 87, 87);
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    
+    background-image: url(images/ring.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    top: 8px;
+    left: 8px;
+  
+  }
+
+.food-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.food-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.food-item .item-details {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.food-item p {
+    margin: 0 15px;
+}
+
+.food-item button {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.food-item button:hover {
+    background-color: #218838;
+}
