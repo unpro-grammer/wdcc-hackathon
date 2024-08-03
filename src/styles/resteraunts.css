@@ -4,34 +4,35 @@
     font-family: Arial, sans-serif;
 }
 
-.blocks-container {
-    display: flex;
-    overflow-x: scroll;
+.blocks-container1 {
+    display: inline-block;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .block1 {
-    margin: 10px;
+    margin: 0px;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 250px;
+    /* align block1 in centre of page */
     display: inline-block;
     text-decoration: none;
 }
 
 .block1 img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
-.food-items-container {
+.food-items-container1 {
     margin-top: 20px;
 }
 
-.food-items {
+.food-items1 {
     list-style: none;
     padding: 0;
 }
@@ -62,7 +63,7 @@ ul li {
   
   }
 
-.food-item {
+.food-item1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -73,25 +74,25 @@ ul li {
     overflow: hidden;
 }
 
-.food-item img {
+.food-item1 img {
     width: 100px;
     height: 100px;
     object-fit: cover;
     margin-right: 15px;
 }
 
-.food-item .item-details {
+.food-item1 .item-details {
     flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.food-item p {
+.food-item1 p {
     margin: 0 15px;
 }
 
-.food-item button {
+.food-item1 button {
     padding: 5px 10px;
     background-color: #28a745;
     color: white;
@@ -100,6 +101,54 @@ ul li {
     cursor: pointer;
 }
 
-.food-item button:hover {
+.food-item1 button:hover {
     background-color: #218838;
+}
+
+.item-details1 {
+    display: flex;
+    padding-left: 30px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.note-space {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    margin: 20px 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.note-space p {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    text-align: center;
+    background-color: #e0c6f5;
+    border: 1px solid #e0c6f5;
+    border-radius: 5px;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.note-space p.fade-out {
+    opacity: 0;
+}
+
+.checkout-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.checkout-button:hover {
+    background-color: #45a049;
 }

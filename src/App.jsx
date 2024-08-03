@@ -6,6 +6,7 @@ import Home from './pages/home'
 import Discover from './pages/discover'
 import Resteraunts from  './pages/resteraunts'
 import Cart from './pages/cart'
+import { CartProvider } from './pages/cartContext';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,15 +15,17 @@ function App() {
     <>
       <Navbar />
       <div>
-        <BrowserRouter>
-          <Routes>
-            <Route index element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/discover" element={<Discover />} />
-            <Route path="/restaurants" element={<Resteraunts />} />
-            <Route path="/cart" element={<Cart />} />
-          </Routes>
-        </BrowserRouter>
+      <CartProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route index element={<Home />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/discover" element={<Discover />} />
+              <Route path="/restaurants" element={<Resteraunts />} />
+              <Route path="/cart" element={<Cart />} />
+            </Routes>
+          </BrowserRouter>
+        </CartProvider>
       </div>
     </>
   )
