@@ -42,40 +42,15 @@
     object-fit: cover;
 }
 
-.food-items-container {
+.food-items-container3 {
     margin-top: 20px;
 }
 
-.food-items {
+.food-items3 {
     list-style: none;
     padding: 0;
 }
 
-ul li {
-    list-style: none;
-    font-size: 18px;
-    color: rgb(122, 87, 87);
-    padding: 12px 8px 12px 50px;
-    user-select: none;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  ul li::before {
-    content: '';
-    position: absolute;
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    
-    background-image: url(images/ring.jpg);
-    background-size: cover;
-    background-position: center;
-    
-    top: 8px;
-    left: 8px;
-  
-  }
 
 .home-button-recipt {
     padding: 5px 10px;
