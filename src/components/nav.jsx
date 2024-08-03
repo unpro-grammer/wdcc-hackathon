@@ -24,10 +24,10 @@ function Navbar() {
         <nav className={`${styles.navbar}` }>
 
           {/* logo */}
-          <a href='./' className={`${styles.logo}`}>HOME. </a>
+          <a href='/' className={`${styles.logo}`}>HOME. </a>
                 <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
                     <li onClick={removeActive}>
-                    <a href='./' className={`${styles.navLink}`}>Home</a>
+                    <a href='/' className={`${styles.navLink}`}>Home</a>
                     </li>
                     <li onClick={removeActive}>
                     <a href='/discover' className={`${styles.navLink}`}>Discover</a>
