@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import  styles from './Navbar.module.css';
+import  styles from '../styles/Navbar.module.css';
+import React from 'react';
+
 
 function Navbar() {
   // adding the states 
@@ -22,20 +24,17 @@ function Navbar() {
         <nav className={`${styles.navbar}`}>
 
           {/* logo */}
-          <a href='#home' className={`${styles.logo}`}>Dev. </a>
+          <a href='#home' className={`${styles.logo}`}>HOME. </a>
 
           <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
             <li onClick={removeActive}>
               <a href='#home' className={`${styles.navLink}`}>Home</a>
             </li>
             <li onClick={removeActive}>
-              <a href='#home' className={`${styles.navLink}`}>Catalog</a>
+              <a href='#Discover' className={`${styles.navLink}`}>Discover</a>
             </li>
             <li onClick={removeActive}>
-              <a href='#home' className={`${styles.navLink}`}>All products</a>
-            </li>
-            <li onClick={removeActive}>
-              <a href='#home' className={`${styles.navLink}`}>Contact</a>
+              <a href='#Cart' className={`${styles.navLink}`}>Cart</a>
             </li>
           </ul>
 
