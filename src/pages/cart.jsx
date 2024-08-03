@@ -19,34 +19,41 @@ const foodItems = [
 function CartPage() {
     const [items, setItems] = useState(foodItems);
 
+    const handleRemoveItem = (item) => {
+        setItems(items.filter((i) => i !== item));
+    };
+
     return (
         <div className="simple-page">
-            <h1>That One Restaurant</h1>
-
-            <div className="blocks-container scrollable">
-                {blocks1.map((block, index) => (
-                    <a href={block.link} key={index} className="block1">
-                        <div>
-                            <img src={block.imgSrc} alt={`Block ${index + 1}`} />
-                        </div>
-                    </a>
-                ))}
-            </div>
+            <h1>Checkout</h1>
 
             <div className="food-items-container">
                 <h2>Food Items</h2>
-                <ul className="food-items">
-                    {items.map((item, index) => (
-                        <li key={index} className="food-item">
-                            <img src={item.imgSrc} alt={`Food Item ${index + 1}`} />
-                            <div className="item-details">
-                                <p>{item.description}</p>
-                                <p>{item.price}</p>
-                            </div>
-                            <button>Add to Cart</button>
-                        </li>
-                    ))}
-                </ul>
+                <div className='vertical-container'>
+                    <ul className="food-items">
+                        {items.map((item, index) => (
+                            <li key={index} className="food-item">
+                                <img src={item.imgSrc} alt={`Food Item ${index + 1}`} />
+                                <div className="item-details">
+                                    <p>{item.description}</p>
+                                    <p>{item.price}</p>
+                                </div>
+                                <button onClick={() => handleRemoveItem(item)}>X</button>
+                            </li>
+                        ))}
+                    </ul>
+                    <div className='price-info'>
+                        <h3>Order breakdown:</h3>
+                        <ul>
+                            <li>Food total: 3000η</li>
+                            <li>Service charge 200η</li>
+                            <li>Delivery charge 500η</li>
+                            <li>Tax (15%): 555η</li>
+                            <li>Total: 4255η</li>
+                        </ul>
+                        <button id='CheckoutButton'>Checkout</button>
+                    </div>
+                </div>
             </div>
         </div>
     );
