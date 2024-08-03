@@ -96,6 +96,32 @@ body {
     overflow-x: auto; /* Add horizontal scrolling if needed */
 }
 
+ul li {
+    list-style: none;
+    font-size: 18px;
+    color: rgb(122, 87, 87);
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    
+    background-image: url(images/ring.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    top: 8px;
+    left: 8px;
+  
+  }
+
 .food-item {
     display: inline-block;
     margin-right: 20px; /* Space between items */
