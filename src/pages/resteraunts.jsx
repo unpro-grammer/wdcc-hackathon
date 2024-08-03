@@ -21,17 +21,18 @@ const foodItems = [
 
 function RestaurantPage() {
     const [items, setItems] = useState(foodItems);
-    const { addToCart, cart } = useContext(CartContext);
+    const { addToCart } = useContext(CartContext);
     const [note, setNote] = useState('');
     const navigate = useNavigate();
 
     const handleAddToCart = (item) => {
         addToCart(item);
         setNote('Added to cart');
+        console.log(item);
     };
 
     const handleCheckout = () => {
-        navigate('/cart', { state: { cartItems: cart } });
+        navigate('/cart');
     };
 
     useEffect(() => {
