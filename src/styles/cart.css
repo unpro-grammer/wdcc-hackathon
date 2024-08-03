@@ -235,3 +235,7 @@ ul li {
     margin-top: 20px;
     font-size: 30px;
 }
+
+.confirmation-button:hover {
+    background-color: #b9a3da;
+}

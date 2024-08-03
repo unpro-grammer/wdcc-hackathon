@@ -25,7 +25,7 @@ function App() {
               <Route path="/discover" element={<Discover />} />
               <Route path="/restaurants" element={<Resteraunts />} />
               <Route path="/cart" element={<Cart />} />
-              <Route path="/recipt" element={<Recipt />} />
+              <Route path="/receipt" element={<Recipt />} />
             </Routes>
           </BrowserRouter>
         </CartProvider>

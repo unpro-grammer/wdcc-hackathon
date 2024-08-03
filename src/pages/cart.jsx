@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import '../styles/cart.css';
 import cheeseburger from '../resources/images/cheesburger.jpg';
 import { CartContext } from './cartContext';
+import { useNavigate } from 'react-router-dom';
 
 const foodItems = [
     { imgSrc: cheeseburger, description: 'Delicious Cheeseburger', price: '$5.99' },
@@ -16,6 +17,12 @@ function CartPage() {
 
     const handleRemoveItem = (itemId) => {
         removeFromCart(itemId);
+    };
+
+    const navigate = useNavigate();
+
+    const handleConfirmClick = () => {
+        navigate('/receipt');
     };
 
     const calculateTotal = () => {
@@ -70,7 +77,7 @@ function CartPage() {
                             <div><input type="email" id="email" name="email" placeholder="you@example.com" /></div>
                         </div>
                         <div className='confirm-button'>
-                            <button type="button" className='confirmation-button'>Confirm</button>
+                            <button type="button" className='confirmation-button' onClick={handleConfirmClick}>Confirm</button>
                         </div>
                     </div>
 
