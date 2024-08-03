@@ -36,11 +36,6 @@ function Navbar() {
                     <a href='/cart' className={`${styles.navLink}`}>Cart</a>
                     </li>
                 </ul>
-          <div className={`${styles.hamburger} ${isActive ? styles.active : ''}`}  onClick={toggleActiveClass}>
-            <span className={`${styles.bar}`}></span>
-            <span className={`${styles.bar}`}></span>
-            <span className={`${styles.bar}`}></span>
-          </div>
         </nav>
 
       </header>
