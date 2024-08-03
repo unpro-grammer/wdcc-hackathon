@@ -54,25 +54,7 @@ body {
     padding: 0;
 }
 
-.price-info{
-    flex:  1;
-    /* align centre but vertically stacked*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-    margin-left: 100px;
-    border-radius: 8px;
-    width: 300px;
-    height: 300px;
-    display: inline-block;
-    text-decoration: none;
-    background-color: #342e40;
-    margin-bottom: 10px;
-       
-}
+
 .vertical-container {
     display: flex;
     justify-content: space-between;
@@ -111,7 +93,6 @@ ul li {
   .food-item {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align items to the start */
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 8px;
@@ -124,18 +105,19 @@ ul li {
     width: 100px;
     height: 100px;
     object-fit: cover;
-    margin-right: 15px;
+    margin-right: 20px;
+    border-radius: 8px;
 }
 
-.food-item .item-details {
-    flex-grow: 1;
+.food-item .item-name {
     width: 100%;
-    display: flex;
+    margin-left: 20px;
+    /* align text to left */
+    text-align: left;
 }
 
 .item-name, .item-price {
     display: flex;
-    justify-content: space-between;
     width: 100%;
 }
 
@@ -146,6 +128,7 @@ ul li {
 
 .food-item p {
     margin: 0 15px;
+    margin-left: 20px;
 }
 
 .food-item button {
@@ -164,27 +147,39 @@ ul li {
 
 .email-input {
     width: 100%;
-    padding: 10px;
+    margin-top: 30px;
+    padding: 20px;
     margin: 10px 0;
     border-radius: 8px;
     background-color: #342e40;
 }
 
 .email-input input {
-    background-color: #ede3fd; /* Light blue background color */
+    background-color: #d9d0e7; /* Light lilac background color */
     padding: 10px;
-    border-radius: 5px;
-    width: 100%;
-    box-sizing: border-box;
+    border-radius: 8px;
+    width: 80%;
+}
+/* change input typing colour to #342e40*/
+.email-input input::placeholder {
+    color: #685b80;
+}
+
+/*also change user input colour*/
+.email-input input {
+    color: #342e40;
 }
 .confirmation-button {
     padding: 10px;
+    width: 200px;
     margin-top: 100px;
     color:#13111a;
-    background-color: #ede3fd;
+    background-color: #d9d0e7;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    /* make font bold */
+    font-weight: bold;
 }
 
 .remove-button {
@@ -192,4 +187,51 @@ ul li {
     width: auto;
     margin-right: 30px;
     color: #13111a;
+}
+
+.totals-container {
+    display: flex;
+    justify-content: center; /* Center the container */
+    margin-top: 20px;
+    height: 50px;
+    background-color: #d9d0e7;
+    border-radius: 8px;
+}
+
+.totals-container li {
+    color: #342e40;
+    /* centre text to its container vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.price-actual-info {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    width: 100%;
+    background-color: #342e40;
+    border-radius: 8px;
+    padding-top: 30px;
+}
+
+.price-actual-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: #342e40;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+.price-actual-info h3 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 30px;
 }

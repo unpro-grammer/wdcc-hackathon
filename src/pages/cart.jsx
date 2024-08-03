@@ -54,13 +54,17 @@ function CartPage() {
                         ))}
                     </ul>
                     <div className='price-info'>
-                        <h3>Order breakdown:</h3>
-                        <ul>
-                            <li>Food total: {totals.foodTotal}η</li>
-                            <li>Service charge 200η</li>
-                            <li>Delivery charge 500η</li>
-                            <li>Tax (15%): 555η</li>
-                        </ul>
+                        <div className='price-actual-info'>
+                            <h3>Order breakdown:</h3>
+                            <ul>
+                                <li>Food total: {totals.foodTotal}η</li>
+                                <li>Service charge: 200η</li>
+                                <li>Delivery charge: 500η</li>
+                                <li>Tax (15%): {totals.tax}η</li>
+                                <div className='totals-container'>
+                                    <li>Total: {totals.total}η</li>
+                                </div>
+                            </ul></div>
                         <div className='email-input'>
                             <label htmlFor="email">Enter your email:</label>
                             <div><input type="email" id="email" name="email" placeholder="you@example.com" /></div>
