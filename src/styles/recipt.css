@@ -1,7 +1,6 @@
 /* src/styles/restaurants.css */
 .recipt-page {
     padding: 20px;
-    font-family: Arial, sans-serif;
     text-align: center;
     display: 'flex';
     justify-content: 'center'; 
@@ -53,14 +52,23 @@
 
 
 .home-button-recipt {
-    padding: 5px 10px;
-    background-color: #28a745;
-    color: white;
+    padding: 10px 20px;
+    background-color: #d9d0e7;
+    color: #342e40;
+    /* bold font */
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.home-button-recipt button:hover {
-    background-color: #218838;
+.home-button-recipt:hover {
+    background-color: #b9a3da;
+}
+
+.subtitle-recipt {
+    padding-left: 0;
+    text-align: center;
+    padding-bottom: 20px;
+    color: #d9d0e7;
 }
