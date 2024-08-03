@@ -9,12 +9,14 @@
     gap: 20px;
     /* centre text */
     text-align: center;
+    padding-bottom: 30px;
 }
 .scrollable {
     max-height: 200px; /* Adjust the height as needed */
     overflow-x: auto;
     overflow-y: hidden; /* Hide vertical scrollbar */
     white-space: nowrap;
+    padding-bottom: 30px;
 }
 
 .block {
@@ -27,6 +29,7 @@
     border-radius: 8px;
     text-decoration: none;
     background-color: #ffffff;
+    padding-bottom: 30px;
 }
 
 /* Custom scrollbar styles */

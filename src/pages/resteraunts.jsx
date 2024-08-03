@@ -1,4 +1,5 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 // import '../styles/cart.css';
 import '../styles/resteraunts.css'; // Corrected typo
 import cheeseburger from '../resources/images/cheesburger.jpg'; // Corrected typo
@@ -20,17 +21,34 @@ const foodItems = [
 
 function RestaurantPage() {
     const [items, setItems] = useState(foodItems);
-    const { addToCart } = useContext(CartContext);
+    const { addToCart, cart } = useContext(CartContext);
+    const [note, setNote] = useState('');
+    const navigate = useNavigate();
 
     const handleAddToCart = (item) => {
         addToCart(item);
+        setNote('Added to cart');
     };
+
+    const handleCheckout = () => {
+        navigate('/cart', { state: { cartItems: cart } });
+    };
+
+    useEffect(() => {
+        if (note) {
+            const timer = setTimeout(() => {
+                document.querySelector('.note-space p').classList.add('fade-out');
+                setTimeout(() => setNote(''), 500); // Wait for the fade-out transition
+            }, 200); // Start fading out after 0.2 seconds
+            return () => clearTimeout(timer);
+        }
+    }, [note]);
 
     return (
         <div className="simple-page">
             <h1>That One Restaurant</h1>
 
-            <div className="blocks-container scrollable">
+            <div className="blocks-container1">
                 {blocks1.map((block, index) => (
                     <a href={block.link} key={index} className="block1">
                         <div>
@@ -38,6 +56,10 @@ function RestaurantPage() {
                         </div>
                     </a>
                 ))}
+            </div>
+
+            <div className="note-space">
+                {note && <p>{note}</p>}
             </div>
 
             <div className="food-items-container1">
@@ -55,6 +77,8 @@ function RestaurantPage() {
                     ))}
                 </ul>
             </div>
+
+            <button onClick={handleCheckout} className="checkout-button">Checkout</button>
         </div>
     );
 }

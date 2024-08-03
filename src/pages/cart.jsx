@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/cart.css';
 import cheeseburger from '../resources/images/cheesburger.jpg'; // Corrected typo
+import { useLocation } from 'react-router-dom';
 
 const blocks1 = [
     { imgSrc: cheeseburger, link: 'https://google.com' },
@@ -18,6 +19,8 @@ const foodItems = [
 
 function CartPage() {
     const [items, setItems] = useState(foodItems);
+    const location = useLocation();
+    const { cartItems } = location.state || { cartItems: [] };
 
     const handleRemoveItem = (item) => {
         setItems(items.filter((i) => i !== item));
@@ -30,18 +33,14 @@ function CartPage() {
             <div className="food-items-container">
                 <h2>Food Items</h2>
                 <div className='vertical-container'>
-                    <ul className="food-items">
-                        {items.map((item, index) => (
-                            <li key={index} className="food-item">
-                                <img src={item.imgSrc} alt={`Food Item ${index + 1}`} />
-                                <div className="item-details">
-                                    <p>{item.description}</p>
-                                    <p>{item.price}</p>
-                                </div>
-                                <button onClick={() => handleRemoveItem(item)}>X</button>
-                            </li>
-                        ))}
-                    </ul>
+                <ul>
+                {cartItems.map((item, index) => (
+                    <li key={index}>
+                        <p>{item.description}</p>
+                        <p>{item.price}</p>
+                    </li>
+                ))}
+            </ul>
                     <div className='price-info'>
                         <h3>Order breakdown:</h3>
                         <ul>
