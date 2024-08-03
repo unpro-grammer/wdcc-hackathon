@@ -21,17 +21,17 @@ function Navbar() {
   return (
     <div className="App">
       <header className="App-header">
-
         <nav className={`${styles.navbar}`}>
-          <a href='./' className={`${styles.logo}`}>
+          <a href='/' className={`${styles.logo}`}>
             <img src={logo} className={styles.logoImg} alt="Space Bites Logo" />
           </a>
           <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
             <li onClick={removeActive}>
-              <a href='./' className={`${styles.navLink}`}>Home</a>
+              <a href='/' className={`${styles.navLink}`}>Home</a>
             </li>
             <li onClick={removeActive}>
-              <a href='/discover' className={`${styles.navLink}`}>Discover</a>
+              <a href='/discover' className={`${styles.
+              Link}`}>Discover</a>
             </li>
             <li onClick={removeActive}>
               <a href='/cart' className={`${styles.navLink}`}>Cart</a>
