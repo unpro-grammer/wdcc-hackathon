@@ -4,13 +4,31 @@ import earthfood from '../resources/images/earthfood.jpg';
 import interstellarfood from '../resources/images/interstellarfood.jpg';
 import galaxymap from '../resources/images/galaxymap.png';
 import '../styles/home.css';
+import { useState, useEffect } from 'react';
 
 const Home = () => {
-  return (
+    const [displayedText, setDisplayedText] = useState('');
+    // for SOME REASON the second letter of the text is not showing up, hence the zero width space next in Order
+    const fullText = 'O​rder bites out of this world here...';
+
+
+    useEffect(() => {
+      let index = 0;
+      const interval = setInterval(() => {
+        setDisplayedText((prev) => prev + fullText[index]);
+        index++;
+        if (index === fullText.length-1) {
+          clearInterval(interval);
+        }
+      }, 100); // Adjust the speed by changing the interval time (in milliseconds)
+      
+      return () => clearInterval(interval); // Cleanup interval on component unmount
+    }, []);
+    return (
     <div className="main-home">
       <div className="home-container">
         <div className="home-contents">
-          <h1>Order bites out of this world here:</h1>
+          <h1>​{displayedText}</h1>
           <form className="search-form">
             <input type="text" placeholder="Search for food..." className="search-input" />
             <button type="submit" className="search-button">Search</button>
