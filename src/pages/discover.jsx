@@ -43,7 +43,7 @@ function DiscoverPage() {
       <div className="blocks-container scrollable">
         {filteredBlocks.filter(block => block.type === 'local').map((block, index) => (
           <Link to={block.link} key={index} className="block">
-            <div>
+            <div className="imgWrapper">
               <img src={block.imgSrc} alt={`Block ${index + 1}`} />
             </div>
             <p style={{ textAlign: 'center' }}>{block.name}</p>
@@ -54,7 +54,7 @@ function DiscoverPage() {
       <div className="blocks-container scrollable">
         {filteredBlocks.filter(block => block.type === 'earth').map((block, index) => (
           <a href={block.link} key={index} className="block">
-            <div>
+            <div className="imgWrapper">
               <img src={block.imgSrc} alt={`Block ${index + 1}`} />
             </div>
             <p style={{ textAlign: 'center' }}>{block.name}</p>
@@ -65,7 +65,7 @@ function DiscoverPage() {
       <div className="blocks-container scrollable">
         {filteredBlocks.filter(block => block.type === 'interstellar').map((block, index) => (
           <a href={block.link} key={index} className="block">
-            <div>
+            <div className="imgWrapper">
               <img src={block.imgSrc} alt={`Block ${index + 1}`} />
             </div>
             <p style={{ textAlign: 'center' }}>{block.name}</p>
