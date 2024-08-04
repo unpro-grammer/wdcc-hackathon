@@ -8,27 +8,27 @@ import { useState, useEffect } from 'react';
 import logo from '../assets/SpaceBites_logo__2.png'
 
 const Home = () => {
-    const [displayedText, setDisplayedText] = useState('');
-    // for SOME REASON the second letter of the text is not showing up, hence the zero width space next in Order
-    const fullText = 'O​rder bites out of this world here...';
+  const [displayedText, setDisplayedText] = useState('');
+  // for SOME REASON the second letter of the text is not showing up, hence the zero width space next in Order
+  const fullText = 'O​rder bites out of this world here...';
 
 
-    useEffect(() => {
-      let index = 0;
-      const interval = setInterval(() => {
-        setDisplayedText((prev) => prev + fullText[index]);
-        index++;
-        if (index === fullText.length-1) {
-          clearInterval(interval);
-        }
-      }, 100); // Adjust the speed by changing the interval time (in milliseconds)
-      
-      return () => clearInterval(interval); // Cleanup interval on component unmount
-    }, []);
-    return (
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      setDisplayedText((prev) => prev + fullText[index]);
+      index++;
+      if (index === fullText.length - 1) {
+        clearInterval(interval);
+      }
+    }, 100); // Adjust the speed by changing the interval time (in milliseconds)
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, []);
+  return (
     <div className="main-home">
       <div className="home-container">
-        <img src={logo} alt='logo' className='home-logo'/>
+        <img src={logo} alt='logo' className='home-logo' />
         <div className="home-contents">
           <h1>​{displayedText}</h1>
           <form className="search-form">
@@ -66,9 +66,11 @@ const Home = () => {
           </div>
         </a>
       </div>
-      <h2>Find bites near you:</h2>
-      <div className="planet-map">
-        <img src={galaxymap} alt="Space Bites Logo" />
+      <div className="map-divider">
+        <h2>Find bites near you:</h2>
+        <div className="planet-map">
+          <img src={galaxymap} alt="galaxy map" />
+        </div>
       </div>
     </div>
   );
