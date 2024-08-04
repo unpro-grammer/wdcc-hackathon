@@ -5,6 +5,14 @@ import '../styles/resteraunts.css'; // Corrected typo
 import banner from '../resources/images/banner_that_one.png'; // Corrected typo
 import cheeseburger from '../resources/images/cheesburger.jpg'; // Corrected typo
 import { CartContext } from './cartContext';
+import milkyway from '../resources/images/e.jpg'; // Added missing image
+import mightymars from '../resources/images/i.jpg'; // Added missing image
+import chickennugs from '../resources/images/a.jpg'; // Added missing image
+import moonburger from '../resources/images/f.jpg'; // Added missing image
+import starfries from '../resources/images/g.jpg'; // Added missing image
+import supernovasundae from '../resources/images/b.jpg'; // Added missing image
+import alienpancake from '../resources/images/c.jpg'; // Added missing image
+import sandwich from '../resources/images/d.jpg'; // Added missing image
 
 const blocks1 = [
     { imgSrc: banner },
@@ -12,11 +20,14 @@ const blocks1 = [
 ];
 
 const foodItems = [
-    { imgSrc: cheeseburger, description: 'Delicious Cheeseburger', price: '599' },
-    { imgSrc: cheeseburger, description: 'Yummy Fries', price: '299' },
-    { imgSrc: cheeseburger, description: 'Tasty Milkshake', price: '399' },
-    { imgSrc: cheeseburger, description: 'Scrumptious Salad', price: '499' },
-    { imgSrc: cheeseburger, description: 'Delightful Ice Cream', price: '399' },
+    { imgSrc: milkyway, description: 'Milky Way', price: '599' },
+    { imgSrc: mightymars, description: 'Mighty Mars', price: '299' },
+    { imgSrc: chickennugs, description: 'Chicken McLickin\'', price: '399' },
+    { imgSrc: moonburger, description: 'Moon Burger', price: '499' },
+    { imgSrc: starfries, description: 'Starfries', price: '399' },
+    { imgSrc: supernovasundae, description: 'Supernova Sundae', price: '299' },
+    { imgSrc: alienpancake, description: 'The Aliens', price: '399' },
+    { imgSrc: sandwich, description: 'Starwich', price: '499' },
     // Add more food items as needed
 ];
 
