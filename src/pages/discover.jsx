@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useLocation, Link } from 'react-router-dom';
 import '../styles/discover.css';
 import cheeseburger from '../resources/images/cheesburger.jpg';
 import rest8 from '../resources/images/rester8.jpg';
@@ -9,12 +9,34 @@ import rest3 from '../resources/images/pizza3.jpg';
 import rest from '../resources/images/rester.jpg';
 import restf from '../resources/images/rester1 (2).jpg';
 
+// Custom hook to get query parameters
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
 
 function DiscoverPage() {
+  // Initialize query parameter
+  const query = useQuery();
+  const [searchQuery, setSearchQuery] = useState(query.get('query') || '');
   const [selectedFilter, setSelectedFilter] = useState('');
-  const [searchQuery, setSearchQuery] = useState('');
   const [showFavorites, setShowFavorites] = useState(false);
 
+  // Effect to handle initial search with the query parameter
+  useEffect(() => {
+    if (searchQuery) {
+      console.log(`Searching for: ${searchQuery}`);
+      // Perform search logic here
+    }
+  }, [searchQuery]);
+
+  // Handle search form submission
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    console.log(`Searching for: ${searchQuery}`);
+    // Perform search logic here
+  };
+
+  // Sample data
   const blocks1 = [
     { imgSrc: rest8, link: 'https://google.com', type: 'local', name: 'Galactic Grill & Tacos', dietary: ['vegan', 'gluten-free'], favorite: true },
     { imgSrc: rest7, link: 'https://google.com', type: 'local', name: 'Nebula Noodles', dietary: ['vegetarian'], favorite: false },
@@ -67,7 +89,6 @@ function DiscoverPage() {
               placeholder="Search..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)} className="search-input" />
-            <button type="submit" className="search-button">Search</button>
           </form>
         </div>
         <div className="filters">
