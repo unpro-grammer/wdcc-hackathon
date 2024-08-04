@@ -26,7 +26,7 @@ function CartPage() {
     };
 
     const calculateTotal = () => {
-        const foodTotal = cartItems.reduce((total, item) => total + parseFloat(item.price.slice(1)), 0);
+        const foodTotal = cartItems.reduce((total, item) => total + parseFloat(item.price), 0);
         const serviceCharge = 200;
         const deliveryCharge = 500;
         const tax = foodTotal * 0.15;
@@ -55,7 +55,7 @@ function CartPage() {
                             <li key={index} className="food-item">
                                 <img src={item.imgSrc} alt={item.name} className='item-image' />
                                 <span className="item-name">{item.description}</span>
-                                <span className="item-price">{item.price}</span>
+                                <span className="item-price">{item.price}η</span>
                                 <button className="remove-button" onClick={() => handleRemoveItem(item.id)}>X</button>
                             </li>
                         ))}
@@ -65,8 +65,8 @@ function CartPage() {
                             <h3>Order breakdown:</h3>
                             <ul>
                                 <li>Food total: {totals.foodTotal}η</li>
-                                <li>Service charge: 200η</li>
-                                <li>Delivery charge: 500η</li>
+                                <li>Service charge: 200.00η</li>
+                                <li>Delivery charge: 500.00η</li>
                                 <li>Tax (15%): {totals.tax}η</li>
                                 <div className='totals-container'>
                                     <li>Total: {totals.total}η</li>

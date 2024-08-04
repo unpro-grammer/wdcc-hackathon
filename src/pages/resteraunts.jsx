@@ -11,11 +11,11 @@ const blocks1 = [
 ];
 
 const foodItems = [
-    { imgSrc: cheeseburger, description: 'Delicious Cheeseburger', price: '$5.99' },
-    { imgSrc: cheeseburger, description: 'Yummy Fries', price: '$2.99' },
-    { imgSrc: cheeseburger, description: 'Tasty Milkshake', price: '$3.99' },
-    { imgSrc: cheeseburger, description: 'Scrumptious Salad', price: '$4.99' },
-    { imgSrc: cheeseburger, description: 'Delightful Ice Cream', price: '$3.99' },
+    { imgSrc: cheeseburger, description: 'Delicious Cheeseburger', price: '599' },
+    { imgSrc: cheeseburger, description: 'Yummy Fries', price: '299' },
+    { imgSrc: cheeseburger, description: 'Tasty Milkshake', price: '399' },
+    { imgSrc: cheeseburger, description: 'Scrumptious Salad', price: '499' },
+    { imgSrc: cheeseburger, description: 'Delightful Ice Cream', price: '399' },
     // Add more food items as needed
 ];
 
