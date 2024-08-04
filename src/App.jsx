@@ -15,20 +15,22 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <div>
-        <CartProvider>
-          <BrowserRouter>
-            <Routes>
-              <Route index element={<Home />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/discover" element={<Discover />} />
-              <Route path="/restaurants" element={<Resteraunts />} />
-              <Route path="/cart" element={<Cart />} />
-              <Route path="/receipt" element={<Recipt />} />
-            </Routes>
-          </BrowserRouter>
-        </CartProvider>
+    <div className='BackgroundImage'>
+        <Navbar />
+        <div>
+          <CartProvider>
+            <BrowserRouter>
+              <Routes>
+                <Route index element={<Home />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/discover" element={<Discover />} />
+                <Route path="/restaurants" element={<Resteraunts />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/receipt" element={<Recipt />} />
+              </Routes>
+            </BrowserRouter>
+          </CartProvider>
+        </div>
       </div>
     </>
   )

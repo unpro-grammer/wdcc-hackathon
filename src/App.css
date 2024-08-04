@@ -6,6 +6,18 @@ body {
   padding: 0;
 }
 
+.BackgroundImage{
+  background-image: url('./assets/Background image (1).png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: auto;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 #root {
   width: 100%;
