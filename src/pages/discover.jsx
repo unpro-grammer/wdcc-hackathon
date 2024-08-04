@@ -16,10 +16,10 @@ function DiscoverPage() {
   const [showFavorites, setShowFavorites] = useState(false);
 
   const blocks1 = [
-    { imgSrc: rest8, link: '/restaurants', type: 'local', name: 'Galactic Grill & Tacos', dietary: ['vegan', 'gluten-free'], favorite: true },
+    { imgSrc: rest8, link: 'https://google.com', type: 'local', name: 'Galactic Grill & Tacos', dietary: ['vegan', 'gluten-free'], favorite: true },
     { imgSrc: rest7, link: 'https://google.com', type: 'local', name: 'Nebula Noodles', dietary: ['vegetarian'], favorite: false },
     { imgSrc: rest2, link: 'https://google.com', type: 'local', name: 'Stellar Sushi', dietary: ['gluten-free'], favorite: false },
-    { imgSrc: rest3, link: 'https://google.com', type: 'earth', name: 'McGalaxy', dietary: ['gluten-free', 'vegetarian'], favorite: false },
+    { imgSrc: rest3, link: '/restaurants', type: 'earth', name: 'McGalaxy', dietary: ['gluten-free', 'vegetarian'], favorite: false },
     { imgSrc: rest, link: 'https://google.com', type: 'earth', name: 'KFCosmic', dietary: ['vegan'], favorite: true },
     { imgSrc: rest8, link: 'https://google.com', type: 'earth', name: 'FiveAliens', dietary: ['gluten-free'], favorite: false },
     { imgSrc: rest7, link: 'https://google.com', type: 'interstellar', name: 'Pulsar Pizza', dietary: ['vegetarian'], favorite: false },
