@@ -45,9 +45,8 @@ function CartPage() {
   return (
     <div className="simple-page">
       <h1>Checkout</h1>
-
+      <h2>Food Items</h2>
       <div className="food-items-container">
-        <h2>Food Items</h2>
         <div className='vertical-container'>
           <ul className="food-items">
             {cartItems.map((item, index) => (
@@ -71,13 +70,14 @@ function CartPage() {
                 <div className='totals-container'>
                   <li>Total: {totals.total}η</li>
                 </div>
-              </ul></div>
+              </ul>
+            </div>
             <div className='email-input'>
               <label htmlFor="email">Enter your email:</label>
               <div><input type="email" id="email" name="email" placeholder="you@example.com" /></div>
             </div>
             <div className='email-input'>
-              <label htmlFor="email">Enter your location address:</label>
+              <label htmlFor="email">Enter your location:</label>
               <div><input type="email" id="email" name="email" placeholder="e.g. Klorb Land" /></div>
             </div>
             <div className='confirm-button'>

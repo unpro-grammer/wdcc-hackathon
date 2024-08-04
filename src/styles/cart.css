@@ -47,7 +47,7 @@ body {
 
 .food-items-container {
   margin-top: 20px;
-  margin-right: 20px;
+  margin-left: 50px
 }
 
 .food-items {
@@ -136,7 +136,7 @@ ul li::before {
 
 .food-item button {
   padding: 5px 10px;
-  background-color: #d9d0e7;
+  background-color: #7A62BB;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -144,7 +144,7 @@ ul li::before {
 
 
 .food-item button:hover {
-  background-color: #b9a3da;
+  background-color: #FBCF68;
 }
 
 
@@ -155,6 +155,8 @@ ul li::before {
   margin: 10px 0;
   border-radius: 8px;
   background-color: #342e40;
+  margin-bottom: 30px;
+
 }
 
 .email-input input {
@@ -178,9 +180,9 @@ ul li::before {
 .confirmation-button {
   padding: 10px;
   width: 200px;
-  margin-top: 50px;
+  margin-top: 8px;
   color: #13111a;
-  background-color: #d9d0e7;
+  background-color: #7A62BB;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -227,6 +229,10 @@ ul li::before {
   padding-top: 30px;
 }
 
+.price-info {
+  margin-right: 50px;
+}
+
 .price-actual-info {
   display: flex;
   flex-direction: column;
@@ -236,7 +242,7 @@ ul li::before {
   background-color: #342e40;
   padding: 20px;
   box-sizing: border-box;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .price-actual-info h3 {
@@ -246,5 +252,5 @@ ul li::before {
 }
 
 .confirmation-button:hover {
-  background-color: #b9a3da;
+  background-color: #FBCF68;
 }
