@@ -7,6 +7,7 @@ import Discover from './pages/discover'
 import Resteraunts from  './pages/resteraunts'
 import Cart from './pages/cart'
 import Recipt from './pages/recipt'
+import Earth from './pages/earth'
 import { CartProvider } from './pages/cartContext';
 
 
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/restaurants" element={<Resteraunts />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/receipt" element={<Recipt />} />
+                <Route pathth="/earth" element={<Earth />} />
               </Routes>
             </BrowserRouter>
           </CartProvider>

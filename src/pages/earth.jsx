@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/discover.css';
 import cheeseburger from '../resources/images/cheesburger.jpg';
 
-function LocalPage() {
+function EarthPage() {
   const blocks = [
     { imgSrc: cheeseburger, link: '/restaurants', type: 'local', name: 'Galactic Grill & Tacos', dietary: ['vegan', 'gluten-free'], favorite: true },
     { imgSrc: cheeseburger, link: 'https://google.com', type: 'local', name: 'Nebula Noodles', dietary: ['vegetarian'], favorite: false },
@@ -32,4 +33,4 @@ function LocalPage() {
   );
 }
 
-export default LocalPage;
+export default EarthPage;
