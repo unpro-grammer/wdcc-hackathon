@@ -67,7 +67,6 @@ function DiscoverPage() {
               placeholder="Search..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)} className="search-input" />
-            <button type="submit" className="search-button">Search</button>
           </form>
         </div>
         <div className="filters">
