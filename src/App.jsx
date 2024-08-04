@@ -28,7 +28,7 @@ function App() {
                 <Route path="/restaurants" element={<Resteraunts />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/receipt" element={<Recipt />} />
-                <Route pathth="/earth" element={<Earth />} />
+                <Route path="/earth" element={<Earth />} />
               </Routes>
             </BrowserRouter>
           </CartProvider>
