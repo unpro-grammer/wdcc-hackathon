@@ -2,11 +2,12 @@ import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 // import '../styles/cart.css';
 import '../styles/resteraunts.css'; // Corrected typo
+import banner from '../resources/images/banner_that_one.png'; // Corrected typo
 import cheeseburger from '../resources/images/cheesburger.jpg'; // Corrected typo
 import { CartContext } from './cartContext';
 
 const blocks1 = [
-    { imgSrc: cheeseburger, link: 'https://google.com' },
+    { imgSrc: banner },
     // Add more blocks as needed
 ];
 
@@ -23,6 +24,7 @@ function RestaurantPage() {
     const [items, setItems] = useState(foodItems);
     const { addToCart } = useContext(CartContext);
     const [note, setNote] = useState('');
+    const [fadeOut, setFadeOut] = useState(false);
     const navigate = useNavigate();
 
     const handleAddToCart = (item) => {
@@ -30,6 +32,7 @@ function RestaurantPage() {
         addToCart(newItem);
         setNote('Added to cart');
         console.log(newItem);
+        setFadeOut(false);
     };
 
     const handleCheckout = () => {
@@ -38,21 +41,34 @@ function RestaurantPage() {
 
     useEffect(() => {
         if (note) {
-            const timer = setTimeout(() => {
-                document.querySelector('.note-space p').classList.add('fade-out');
-                setTimeout(() => setNote(''), 500); // Wait for the fade-out transition
-            }, 200); // Start fading out after 0.2 seconds
-            return () => clearTimeout(timer);
+            // Show the note for 2 seconds before starting the fade-out
+            setFadeOut(false); // Reset fade-out before showing the note
+            const displayTimer = setTimeout(() => {
+                setFadeOut(true); // Start fading out after 2 seconds
+            }, 2000); // Duration to display the note
+
+            // Remove the note after the fade-out transition (1 second)
+            const fadeOutTimer = setTimeout(() => {
+                setNote('');
+                setFadeOut(false);
+            }, 3000); // Total time: 2 seconds display + 1 second fade-out
+
+            return () => {
+                clearTimeout(displayTimer);
+                clearTimeout(fadeOutTimer);
+            };
         }
     }, [note]);
 
-    return (
-        <div className="simple-page">
-            <h1>That One Restaurant</h1>
 
-            <div className="blocks-container1">
+
+    return (
+        <div className="simple-page5">
+            <h1>McGalaxy</h1>
+
+            <div className="blocks-container5">
                 {blocks1.map((block, index) => (
-                    <a href={block.link} key={index} className="block1">
+                    <a href={block.link} key={index} className="block5">
                         <div>
                             <img src={block.imgSrc} alt={`Block ${index + 1}`} />
                         </div>
@@ -60,8 +76,8 @@ function RestaurantPage() {
                 ))}
             </div>
 
-            <div className="note-space">
-                {note && <p>{note}</p>}
+            <div className={`fixed-note ${note ? 'show' : ''} ${fadeOut ? 'fade-out' : ''}`}>
+                {note}
             </div>
 
             <div className="food-items-container1">
@@ -71,10 +87,10 @@ function RestaurantPage() {
                         <li key={index} className="food-item1">
                             <img src={item.imgSrc} alt={`Food Item ${index + 1}`} />
                             <div className="item-details1">
-                                <p>{item.description}</p>
-                                <p>{item.price}</p>
+                                <p className='item-name'>{item.description}</p>
+                                <p className='item-price'>{item.price}η</p>
                             </div>
-                            <button onClick={() => handleAddToCart(item)}>Add to Cart</button>
+                            <button className='add-button1' onClick={() => handleAddToCart(item)}>Add to Cart</button>
                         </li>
                     ))}
                 </ul>

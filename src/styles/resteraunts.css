@@ -1,30 +1,43 @@
 /* src/styles/restaurants.css */
-.simple-page {
+.simple-page5 {
     padding: 20px;
 }
 
-.blocks-container1 {
+.simple-page5 h1 {
+    /* align text centre */
+    text-align: center;
+    padding:0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+p {
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+}
+
+.blocks-container5 {
     display: inline-block;
     margin-bottom: 20px;
     width: 100%;
 }
 
-.block1 {
+.block5 {
     margin: 0px;
-    border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     width: 100%;
-    height: 250px;
+    height: 400px;
     /* align block1 in centre of page */
     display: inline-block;
     text-decoration: none;
 }
 
-.block1 img {
+.block5 img {
     width: 100%;
     height: auto;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .food-items-container1 {
@@ -34,6 +47,28 @@
 .food-items1 {
     list-style: none;
     padding: 0;
+}
+
+.food-item1 {
+    color: #d9d0e7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color:#342e40;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.item-details1 p {
+    color: #d9d0e7;
+}
+
+.item-price {
+    color: #d9d0e7;
+    font-size: 20px;
 }
 
 ul li {
@@ -67,7 +102,6 @@ ul li {
     justify-content: space-between;
     margin-bottom: 15px;
     padding: 10px;
-    border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 40px;
@@ -78,6 +112,7 @@ ul li {
     height: 100px;
     object-fit: cover;
     margin-right: 15px;
+    border-radius: 8px;
 }
 
 .food-item1 .item-details {
@@ -93,18 +128,19 @@ ul li {
 
 .food-item1 button {
     padding: 5px 10px;
-    background-color: #28a745;
-    color: white;
+    width: 150px;
+    height: 50px;
+    background-color: #d9d0e7;
+    color: #342e40;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
 }
 
-.food-item1 button:hover {
-    background-color: #218838;
-}
 
 .item-details1 {
+    color: #d9d0e7;
     display: flex;
     padding-left: 30px;
     align-items: center;
@@ -121,11 +157,11 @@ ul li {
 }
 
 .note-space p {
+    color:#d9d0e7;
     opacity: 1;
     transition: opacity 1s ease-in-out;
     text-align: center;
-    background-color: #e0c6f5;
-    border: 1px solid #e0c6f5;
+    background-color: #342e40;
     border-radius: 5px;
     max-width: 300px;
     margin: 0 auto;
@@ -136,18 +172,55 @@ ul li {
     opacity: 0;
 }
 
+.add-button1 {
+    margin-right: 20px;
+}
+
+.add-button1:hover {
+    background-color: #b9a3da; /* Color on hover */
+}
+
+.add-button1:active {
+    background-color: #a083ce; /* Color on click */
+}
+
 .checkout-button {
     display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    margin: 60px auto;
+    padding: 20px 40px;
+    background-color: #d9d0e7;
+    color: #342e40;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 26px;
 }
 
 .checkout-button:hover {
-    background-color: #45a049;
+    background-color: #b9a3da;
+}
+.fixed-note {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #b9a3da; /* Example background color */
+    color: #342e40; /* Example text color */
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it appears above other elements */
+    text-align: center; /* Center the text */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition for fading out */
+    opacity: 0; /* Default opacity for hidden state */
+    transform: translateY(-100%); /* Move out of view initially */
+}
+
+.fixed-note.show {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move into view */
+}
+
+.fixed-note.fade-out {
+    opacity: 0; /* Fade out by setting opacity to 0 */
 }
