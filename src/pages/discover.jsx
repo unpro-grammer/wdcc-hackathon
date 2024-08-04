@@ -88,7 +88,7 @@ function DiscoverPage() {
       <div className="discover-nav">
         <h1>Discover</h1>
         <div className="search-bar">
-          <form className="search-form">
+          <form className="search-form12">
             <input type="text"
               placeholder="Search..."
               value={searchQuery}

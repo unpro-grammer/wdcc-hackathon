@@ -86,10 +86,11 @@ img {
   color: #333;
 }
 
-.search-form {
+.search-form12 {
   display: flex;
   margin-top: 10px;
-  width: 600px;
+  width: 400px;
+  margin-left: 0px !important;
 }
 
 .search-input {

@@ -51,10 +51,9 @@ body {
 .search-form {
   display: flex;
   margin-top: 10px;
-  width: 800px;
+  width: 750px;
   height: 40px;
-  /* margin-left: -5%; */
-  margin-left: 12.5%;
+  margin-left: 7.5%;
 }
 
 .search-form button {

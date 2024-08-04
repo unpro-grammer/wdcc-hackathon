@@ -67,7 +67,7 @@ function EarthPage() {
           <div className="discover-nav">
             <h1>Foods from Earth</h1>
             <div className="search-bar">
-              <form className="search-form">
+              <form className="search-form12">
                 <input type="text"
                   placeholder="Search..."
                   value={searchQuery}
