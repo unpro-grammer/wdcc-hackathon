@@ -52,3 +52,6 @@ View website on localhost.
 - Allow for more precise search queries (regarding food items rather than only the companies)
 - Implement login feature and secure database for user info
 - Add a page to enable collaboration requests from businesses
+
+## Demo
+https://github.com/user-attachments/assets/ca1225f4-389b-4590-8659-fe56fb9165c7
