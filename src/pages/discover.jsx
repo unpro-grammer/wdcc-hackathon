@@ -109,7 +109,7 @@ function DiscoverPage() {
         <h2>Local</h2>
         {finalBlocks.filter(block => block.type === 'local').length > 4 && (
           <Link to="/local">
-            <button>Show More</button>
+            <button className="see-more-button">Show More</button>
           </Link>
         )}
       </div>
@@ -120,8 +120,8 @@ function DiscoverPage() {
               <div className="imgWrapper">
                 <img src={block.imgSrc} alt={`Block ${index + 1}`} />
               </div>
+              <p style={{ textAlign: 'center' }}>{block.name}</p>
             </div>
-            <p style={{ textAlign: 'center' }}>{block.name}</p>
           </Link>
         ))}
       </div>
@@ -130,7 +130,7 @@ function DiscoverPage() {
         <h2>Earth</h2>
         {finalBlocks.filter(block => block.type === 'earth').length > 4 && (
           <Link to="/earth">
-            <button>Show More</button>
+            <button className="see-more-button">Show More</button>
           </Link>
         )}
       </div>
@@ -151,7 +151,7 @@ function DiscoverPage() {
         <h2>Interstellar</h2>
         {finalBlocks.filter(block => block.type === 'interstellar').length > 4 && (
           <Link to="/interstellar">
-            <button>Show More</button>
+            <button className="see-more-button">Show More</button>
           </Link>
         )}
       </div>
