@@ -51,7 +51,7 @@ function DiscoverPage() {
     : searchedBlocks;
 
   return (
-    <div className="simple-page">
+    <div className="simple-page2">
       <div className="discover-nav">
         <h1>Discover</h1>
         <div className="search-bar">
@@ -64,10 +64,12 @@ function DiscoverPage() {
           </form>
         </div>
         <div className="filters">
-          <button onClick={() => setSelectedFilter('vegan')}>Vegan</button>
-          <button onClick={() => setSelectedFilter('vegetarian')}>Vegetarian</button>
-          <button onClick={() => setSelectedFilter('gluten-free')}>Gluten-Free</button>
-          <button onClick={() => setSelectedFilter('')}>All</button>
+          <select id="dietary-filter" value={selectedFilter} onChange={(e) => setSelectedFilter(e.target.value)}>
+            <option value="">All</option>
+            <option value="vegan">Vegan</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="gluten-free">Gluten-Free</option>
+          </select>
         </div>
         <div className="favorites-toggle">
           <button onClick={() => setShowFavorites(!showFavorites)}>
@@ -84,8 +86,10 @@ function DiscoverPage() {
       <div className="blocks-container">
         {finalBlocks.filter(block => block.type === 'local').slice(0, 4).map((block, index) => (
           <Link to={block.link} key={index} className="block">
-            <div className="imgWrapper">
-              <img src={block.imgSrc} alt={`Block ${index + 1}`} />
+            <div className="block-card">
+              <div className="imgWrapper">
+                <img src={block.imgSrc} alt={`Block ${index + 1}`} />
+              </div>
             </div>
             <p style={{ textAlign: 'center' }}>{block.name}</p>
           </Link>
@@ -101,10 +105,12 @@ function DiscoverPage() {
       <div className="blocks-container">
         {finalBlocks.filter(block => block.type === 'earth').slice(0, 4).map((block, index) => (
           <a href={block.link} key={index} className="block">
-            <div className="imgWrapper">
-              <img src={block.imgSrc} alt={`Block ${index + 1}`} />
+            <div className="block-card">
+              <div className="imgWrapper">
+                <img src={block.imgSrc} alt={`Block ${index + 1}`} />
+              </div>
+              <p style={{ textAlign: 'center' }}>{block.name}</p>
             </div>
-            <p style={{ textAlign: 'center' }}>{block.name}</p>
           </a>
         ))}
       </div>

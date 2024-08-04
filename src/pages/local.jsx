@@ -16,7 +16,7 @@ function LocalPage() {
   ];
 
   return (
-    <div className="simple-page">
+    <div className="simple-page2">
       <h1>Local Cuisine</h1>
       <div className="blocks-container">
         {blocks.map((block, index) => (
