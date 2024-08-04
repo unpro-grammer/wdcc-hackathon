@@ -6,7 +6,12 @@
     justify-content: 'center'; 
     align-items: 'center';
     flex-direction: 'column'; 
-    padding-left: 0
+    padding-left: 0;
+    margin-top: 5%;
+}
+
+.recipt-page h1 {
+    margin-bottom: 1.2%;
 }
 
 .subtitle-recipt {
@@ -52,9 +57,10 @@
 
 
 .home-button-recipt {
-    padding: 10px 20px;
-    background-color: #d9d0e7;
-    color: #342e40;
+    padding: 15px 30px;
+    background-color: #7A62BB;
+    color: white;
+    margin-top: 1.5%;
     /* bold font */
     font-weight: bold;
     border: none;
@@ -63,12 +69,22 @@
 }
 
 .home-button-recipt:hover {
-    background-color: #b9a3da;
+    background-color: #FBCF68;
 }
+
 
 .subtitle-recipt {
     padding-left: 0;
     text-align: center;
     padding-bottom: 20px;
+    font-size: 222%;
     color: #d9d0e7;
+}
+
+.tick-image {
+    margin: auto;
+}
+
+.empty-div {
+    margin: 100%;
 }
