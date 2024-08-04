@@ -1,5 +1,4 @@
-/* discover.css */
-.simple-page {
+.simple-page h1 {
   text-align: center;
 }
 
@@ -116,7 +115,6 @@ img {
   margin: 0 10px;
   padding: 10px 20px;
   border: none;
-  background-color: #ccc;
   cursor: pointer;
 }
 
