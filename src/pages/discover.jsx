@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/discover.css';
 import cheeseburger from '../resources/images/cheesburger.jpg';
+import rest8 from '../resources/images/rester8.jpg';
+import rest7 from '../resources/images/rester7.jpg';
+import rest2 from '../resources/images/rester2.jpg';
+import rest3 from '../resources/images/pizza3.jpg';
+import rest from '../resources/images/rester.jpg';
+
 
 function DiscoverPage() {
   const [selectedFilter, setSelectedFilter] = useState('');
@@ -9,33 +15,33 @@ function DiscoverPage() {
   const [showFavorites, setShowFavorites] = useState(false);
 
   const blocks1 = [
-    { imgSrc: cheeseburger, link: '/restaurants', type: 'local', name: 'Galactic Grill & Tacos', dietary: ['vegan', 'gluten-free'], favorite: true },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'local', name: 'Nebula Noodles', dietary: ['vegetarian'], favorite: false },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'local', name: 'Stellar Sushi', dietary: ['gluten-free'], favorite: false },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'earth', name: 'McGalaxy', dietary: ['gluten-free', 'vegetarian'], favorite: false },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'earth', name: 'KFCosmic', dietary: ['vegan'], favorite: true },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'earth', name: 'FiveAliens', dietary: ['gluten-free'], favorite: false },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'interstellar', name: 'Pulsar Pizza', dietary: ['vegetarian'], favorite: false },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'interstellar', name: 'Supernova Steak', dietary: [], favorite: true },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'interstellar', name: 'Comet Café', dietary: ['vegan', 'vegetarian'], favorite: false },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'local', name: 'Cosmic Curry', dietary: ['vegan'], favorite: true },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'local', name: 'Meteorite Munchies', dietary: ['gluten-free'], favorite: false },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'local', name: 'Planetary Pizza', dietary: ['vegetarian'], favorite: true },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'earth', name: 'Starbucks', dietary: ['gluten-free', 'vegetarian'], favorite: false },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'earth', name: 'Galactic Gourmet', dietary: ['vegan'], favorite: true },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'earth', name: 'Asteroid Appetizers', dietary: ['gluten-free'], favorite: false },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'interstellar', name: 'Celestial Cuisine', dietary: ['vegetarian'], favorite: false },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'interstellar', name: 'Quantum Quiche', dietary: [], favorite: true },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'interstellar', name: 'Nebula Nibbles', dietary: ['vegan', 'vegetarian'], favorite: false },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'local', name: 'Solar Sizzlers', dietary: ['vegan'], favorite: true },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'local', name: 'Intergalactic Ice Cream', dietary: ['gluten-free'], favorite: false },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'local', name: 'Comet Confections', dietary: ['vegetarian'], favorite: true },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'earth', name: 'Alien Abode', dietary: ['gluten-free', 'vegetarian'], favorite: false },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'earth', name: 'Galactic Grains', dietary: ['vegan'], favorite: true },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'earth', name: 'Planetary Patisserie', dietary: ['gluten-free'], favorite: false },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'interstellar', name: 'Universal Udon', dietary: ['vegetarian'], favorite: false },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'interstellar', name: 'Cosmic Café', dietary: [], favorite: true },
-    { imgSrc: cheeseburger, link: 'https://google.com', type: 'interstellar', name: 'Nebula Nosh', dietary: ['vegan', 'vegetarian'], favorite: false }
+    { imgSrc: rest8, link: '/restaurants', type: 'local', name: 'Galactic Grill & Tacos', dietary: ['vegan', 'gluten-free'], favorite: true },
+    { imgSrc: rest7, link: 'https://google.com', type: 'local', name: 'Nebula Noodles', dietary: ['vegetarian'], favorite: false },
+    { imgSrc: rest2, link: 'https://google.com', type: 'local', name: 'Stellar Sushi', dietary: ['gluten-free'], favorite: false },
+    { imgSrc: rest3, link: 'https://google.com', type: 'earth', name: 'McGalaxy', dietary: ['gluten-free', 'vegetarian'], favorite: false },
+    { imgSrc: rest, link: 'https://google.com', type: 'earth', name: 'KFCosmic', dietary: ['vegan'], favorite: true },
+    { imgSrc: rest8, link: 'https://google.com', type: 'earth', name: 'FiveAliens', dietary: ['gluten-free'], favorite: false },
+    { imgSrc: rest7, link: 'https://google.com', type: 'interstellar', name: 'Pulsar Pizza', dietary: ['vegetarian'], favorite: false },
+    { imgSrc: rest2, link: 'https://google.com', type: 'interstellar', name: 'Supernova Steak', dietary: [], favorite: true },
+    { imgSrc: rest3, link: 'https://google.com', type: 'interstellar', name: 'Comet Café', dietary: ['vegan', 'vegetarian'], favorite: false },
+    { imgSrc: rest8, link: 'https://google.com', type: 'local', name: 'Cosmic Curry', dietary: ['vegan'], favorite: true },
+    { imgSrc: rest7, link: 'https://google.com', type: 'local', name: 'Meteorite Munchies', dietary: ['gluten-free'], favorite: false },
+    { imgSrc: rest2, link: 'https://google.com', type: 'local', name: 'Planetary Pizza', dietary: ['vegetarian'], favorite: true },
+    { imgSrc: rest3, link: 'https://google.com', type: 'earth', name: 'Starbucks', dietary: ['gluten-free', 'vegetarian'], favorite: false },
+    { imgSrc: rest, link: 'https://google.com', type: 'earth', name: 'Galactic Gourmet', dietary: ['vegan'], favorite: true },
+    { imgSrc: rest8, link: 'https://google.com', type: 'earth', name: 'Asteroid Appetizers', dietary: ['gluten-free'], favorite: false },
+    { imgSrc: rest7, link: 'https://google.com', type: 'interstellar', name: 'Celestial Cuisine', dietary: ['vegetarian'], favorite: false },
+    { imgSrc: rest2, link: 'https://google.com', type: 'interstellar', name: 'Quantum Quiche', dietary: [], favorite: true },
+    { imgSrc: rest3, link: 'https://google.com', type: 'interstellar', name: 'Nebula Nibbles', dietary: ['vegan', 'vegetarian'], favorite: false },
+    { imgSrc: rest8, link: 'https://google.com', type: 'local', name: 'Solar Sizzlers', dietary: ['vegan'], favorite: true },
+    { imgSrc: rest7, link: 'https://google.com', type: 'local', name: 'Intergalactic Ice Cream', dietary: ['gluten-free'], favorite: false },
+    { imgSrc: rest2, link: 'https://google.com', type: 'local', name: 'Comet Confections', dietary: ['vegetarian'], favorite: true },
+    { imgSrc: rest3, link: 'https://google.com', type: 'earth', name: 'Alien Abode', dietary: ['gluten-free', 'vegetarian'], favorite: false },
+    { imgSrc: rest, link: 'https://google.com', type: 'earth', name: 'Galactic Grains', dietary: ['vegan'], favorite: true },
+    { imgSrc: rest8, link: 'https://google.com', type: 'earth', name: 'Planetary Patisserie', dietary: ['gluten-free'], favorite: false },
+    { imgSrc: rest7, link: 'https://google.com', type: 'interstellar', name: 'Universal Udon', dietary: ['vegetarian'], favorite: false },
+    { imgSrc: rest2, link: 'https://google.com', type: 'interstellar', name: 'Cosmic Café', dietary: [], favorite: true },
+    { imgSrc: rest3, link: 'https://google.com', type: 'interstellar', name: 'Nebula Nosh', dietary: ['vegan', 'vegetarian'], favorite: false }
   ];
 
   const filteredBlocks = selectedFilter
