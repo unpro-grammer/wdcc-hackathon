@@ -7,6 +7,7 @@ import rest7 from '../resources/images/rester7.jpg';
 import rest2 from '../resources/images/rester2.jpg';
 import rest3 from '../resources/images/pizza3.jpg';
 import rest from '../resources/images/rester.jpg';
+import restf from '../resources/images/rester1 (2).jpg';
 
 
 function DiscoverPage() {

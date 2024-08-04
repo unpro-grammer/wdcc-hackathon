@@ -5,8 +5,9 @@
   align-items: center;
   text-align: center;
   padding: 0;
-  margin: 0;
-  width: 100%
+  margin-top: 30px;
+  width: 100%;
+  background-color: blue;
 }
 
 .simple-page2 h1 {
@@ -37,6 +38,7 @@
   /* Align items from the left */
   gap: 10px;
   /* Add some space between blocks */
+  background-color: red;
 }
 
 .block {
