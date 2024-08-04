@@ -52,8 +52,8 @@ function DiscoverPage() {
 
   return (
     <div className="simple-page">
-      <h1>Discover</h1>
       <div className="discover-nav">
+        <h1>Discover</h1>
         <div className="search-bar">
           <form className="search-form">
             <input type="text"
