@@ -6,12 +6,14 @@ import galaxymap from '../resources/images/galaxymap.png';
 import '../styles/home.css';
 import { useState, useEffect } from 'react';
 import logo from '../assets/SpaceBites_logo__2.png'
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const [displayedText, setDisplayedText] = useState('');
   // for SOME REASON the second letter of the text is not showing up, hence the zero width space next in Order
   const fullText = 'O​rder bites out of this world here...';
-
+  const [searchInput, setSearchInput] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     let index = 0;
@@ -25,14 +27,30 @@ const Home = () => {
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, []);
+
+  const handleSearchChange = (e) => {
+    setSearchInput(e.target.value);
+  };
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    navigate(`/discover?query=${encodeURIComponent(searchInput)}`);
+  };
+
   return (
     <div className="main-home">
       <div className="home-container">
         <img src={logo} alt='logo' className='home-logo' />
         <div className="home-contents">
           <h1>​{displayedText}</h1>
-          <form className="search-form">
-            <input type="text" placeholder="Search for your craving..." className="search-input" />
+          <form className="search-form" onSubmit={handleSearchSubmit}>
+            <input
+              type="text"
+              placeholder="Search for your craving..."
+              className="search-input"
+              value={searchInput}
+              onChange={handleSearchChange}
+            />
             <button type="submit" className="search-button">Search</button>
           </form>
         </div>
