@@ -5,6 +5,7 @@ import interstellarfood from '../resources/images/interstellarfood.jpg';
 import galaxymap from '../resources/images/galaxymap.png';
 import '../styles/home.css';
 import { useState, useEffect } from 'react';
+import logo from '../assets/SpaceBites_logo__2.png'
 
 const Home = () => {
     const [displayedText, setDisplayedText] = useState('');
@@ -27,6 +28,7 @@ const Home = () => {
     return (
     <div className="main-home">
       <div className="home-container">
+        <img src={logo} alt='logo'/>
         <div className="home-contents">
           <h1>​{displayedText}</h1>
           <form className="search-form">
