@@ -1,108 +1,169 @@
-.simple-page {
+.discover-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 0;
+  margin-top: 30px;
+  width: 100%;
+  background-color: blue;
+}
+
+.simple-page2 h1 {
+  text-align: center;
+}
+
+.discover-text {
+  text-align: center;
+}
+
+.search-bar {
+  margin: 10px 0;
+  /* Add some margin for spacing */
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  /* Center filter buttons horizontally */
+  gap: 10px;
+  /* Add some space between buttons */
 }
 
 .blocks-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  /* centre text */
-  text-align: center;
-  padding-bottom: 30px;
-}
-
-.scrollable {
-  max-height: 200px;
-  /* Adjust the height as needed */
-  overflow-x: auto;
-  overflow-y: hidden;
-  /* Hide vertical scrollbar */
-  white-space: nowrap;
-  padding-bottom: 30px;
+  justify-content: flex-start;
+  /* Align items from the left */
+  gap: 10px;
+  /* Add some space between blocks */
+  background-color: red;
+  padding: 0 30px;
 }
 
 .block {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
-  /* Adjust spacing between blocks as needed */
-  width: 200px;
-  height: 200px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  text-decoration: none;
-  background-color: #ffffff;
-  padding-bottom: 30px;
+  flex: 0 1 calc(25% - 10px);
+  /* Ensure blocks take 25% of the container width minus the gap */
+  margin-bottom: 20px;
+  box-sizing: border-box;
 }
 
-/* Custom scrollbar styles */
-.scrollable::-webkit-scrollbar {
-  height: 12px;
-  /* Adjust the height of the scrollbar */
-}
-
-.scrollable::-webkit-scrollbar-track {
-  background: #fbfaff;
-  /* Background of the scrollbar track */
-  border-radius: 10px;
-}
-
-.scrollable::-webkit-scrollbar-thumb {
-  background: #efd6ff;
-  /* Color of the scrollbar thumb */
-  border-radius: 10px;
-}
-
-.scrollable::-webkit-scrollbar-thumb:hover {
-  background: #d4b3ff;
-  /* Color of the scrollbar thumb on hover */
-}
-
-
-
-.block img {
+.imgWrapper {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  overflow: hidden;
 }
 
-/* paragraph styling */
-p {
-  /* change text colour */
-  color: #000000;
-  margin: 0;
-  padding: 10px;
-  /* background-color: #b43636; */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+.block-card {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+}
+
+.block-card .block-text {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1rem;
   color: #333;
-  /* make text show on left */
-  text-align: left;
-  /*change font*/
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
 }
 
-h2 {
-  /* 50px left padding */
-  padding-left: 50px;
-  text-align: left;
+.search-form {
+  display: flex;
+  margin-top: 10px;
+  width: 700px;
 }
 
-/* change background colour */
-body {
-  background-color: #fbfaff;
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
-.search-bar {
+.search-button:hover {
+  background-color: #FBCF68;
+}
+
+.h2 {
+  color: white;
+}
+
+.favorites-toggle {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
 
-.search-bar input {
+.favorites-toggle button {
   padding: 10px;
   width: 200px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.favorites-toggle button:hover {
+  background-color: #f0f0f0;
+}
+
+/* discover.css */
+.filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filters label {
+  margin-right: 10px;
+  align-self: center;
+}
+
+.filters select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.filters select:focus {
+  border-color: #aaa;
+}
+
+.food-type-header {
+  background-color: purple;
+}
+
+.food-type-header {
+  display: flex;
+  align-items: center;
+  /* Align items vertically centered */
+  justify-content: space-between;
+  /* Space out the items */
+}
+
+.food-type-header h2 {
+  margin: 0;
+  color: white;
+  font-size: 2.5rem;
+  margin-left: 45px;
+}
+
+.food-type-header button {
+  margin-left: auto;
+  margin-right: 45px;
+  /* Push the button to the right */
 }

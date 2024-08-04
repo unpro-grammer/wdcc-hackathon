@@ -38,27 +38,33 @@ const Home = () => {
         </div>
       </div>
       <div className="nav-cards">
-        <div className="nav-card">
-          <div className="imgWrapper">
-            <img src={localfood} alt="Local Food" />
+        <a href="/discover">
+          <div className="nav-card">
+            <div className="imgWrapper">
+              <img src={localfood} alt="Local Food" />
+            </div>
+            <h3>Local Food</h3>
+            <p>Endulge in some of the finest local cuisine</p>
           </div>
-          <h3>Local Food</h3>
-          <p>Endulge in some of the finest local cuisine</p>
-        </div>
-        <div className="nav-card">
-          <div className="imgWrapper">
-            <img src={earthfood} alt="Earth Food" />
+        </a>
+        <a href="/discover">
+          <div className="nav-card">
+            <div className="imgWrapper">
+              <img src={earthfood} alt="Earth Food" />
+            </div>
+            <h3>Earth Food</h3>
+            <p>Nostalgic food that makes you feel at home</p>
           </div>
-          <h3>Earth Food</h3>
-          <p>Nostalgic food that makes you feel at home</p>
-        </div>
-        <div className="nav-card">
-          <div className="imgWrapper">
-            <img src={interstellarfood} alt="Interstellar Food" />
+        </a>
+        <a href="/discover">
+          <div className="nav-card">
+            <div className="imgWrapper">
+              <img src={interstellarfood} alt="Interstellar Food" />
+            </div>
+            <h3>Interstellar Food</h3>
+            <p>New and exciting eats</p>
           </div>
-          <h3>Interstellar Food</h3>
-          <p>New and exciting eats</p>
-        </div>
+        </a>
       </div>
       <h2>Find bites near you:</h2>
       <div className="planet-map">
