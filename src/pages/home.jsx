@@ -62,7 +62,7 @@ const Home = () => {
               <img class="pics" src={localfood} alt="Local Food" />
             </div>
             <h3>Local Food</h3>
-            <p>Endulge in some of the finest local cuisine</p>
+            <p>Indulge in some of the finest local cuisine</p>
           </div>
         </a>
         <a href="/discover">

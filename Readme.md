@@ -1,8 +1,54 @@
-# React + Vite
+# SpaceBites
+### WDCC x SESA 2024 Hackathon Project
+#### Made with an awesome team of 6 :)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![SpaceBites Site](src/resources/images/ss.png)
 
-Currently, two official plugins are available:
+### Problem statement
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+After the Earth was lost to an earth-shattering explosion, human life must begin anew in the extraterrestrial realm. To reminisce about the fond memories of homely comforts, as well as connect with a foreign lifestyle, SpaceBites brings its users a selection of Earth-based, local, and interstellar dishes.
+
+## Functions
+
+- Search for restaurants
+- Filter by dietary requirements
+- Modify items in cart
+
+(Currently, McGalaxy has a full menu list.)
+
+## Usage
+
+This project was made using React + Vite.
+
+Clone the repository and install dependencies:
+
+```sh
+git clone <repository-url>
+cd <repository-directory>
+npm install
+```
+
+Install vite:
+
+```sh
+npm install vite --save-dev
+```
+
+Run vite:
+```sh
+npx vite
+```
+
+Run script:
+```sh
+npm run dev
+```
+
+View website on localhost.
+
+## Future steps
+
+- Implement backend logic to handle ordering
+- Allow for more precise search queries (regarding food items rather than only the companies)
+- Implement login feature and secure database for user info
+- Add a page to enable collaboration requests from businesses
