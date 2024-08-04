@@ -66,9 +66,21 @@ p {
     color: #d9d0e7;
 }
 
+.item-name999{
+    font-size: 28px;
+    text-align: left;
+    width: 400px;
+}
+
+.fooditemtitle{
+    margin-bottom: 25px;
+    text-align: center;
+    margin-left: 0px;
+}
 .item-price {
     color: #d9d0e7;
     font-size: 20px;
+    justify-content: right;
 }
 
 ul li {

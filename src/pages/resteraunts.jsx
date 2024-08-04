@@ -92,13 +92,13 @@ function RestaurantPage() {
             </div>
 
             <div className="food-items-container1">
-                <h2>Food Items</h2>
+                <h2 className='fooditemtitle'>Food Items</h2>
                 <ul className="food-items1">
                     {items.map((item, index) => (
                         <li key={index} className="food-item1">
                             <img src={item.imgSrc} alt={`Food Item ${index + 1}`} />
                             <div className="item-details1">
-                                <p className='item-name'>{item.description}</p>
+                                <p className='item-name999'>{item.description}</p>
                                 <p className='item-price'>{item.price}η</p>
                             </div>
                             <button className='add-button1' onClick={() => handleAddToCart(item)}>Add to Cart</button>
