@@ -8,6 +8,10 @@ import rest2 from '../resources/images/rester2.jpg';
 import rest3 from '../resources/images/pizza3.jpg';
 import rest from '../resources/images/rester.jpg';
 import restf from '../resources/images/rester1 (2).jpg';
+import mcdon from '../resources/images/mcrester6.jpg';
+import kfc from '../resources/images/kfcrester5.jpg';
+import fiveguys from '../resources/images/fiveguys4.jpg';
+import coolone from '../resources/images/rester1.jpg';
 
 // Custom hook to get query parameters
 function useQuery() {
@@ -38,15 +42,33 @@ function EarthPage() {
 
     // Sample data
     const blocks1 = [
-        { imgSrc: rest3, link: '/restaurants', type: 'earth1', name: 'McGalaxy', dietary: ['gluten-free', 'vegetarian'], favorite: false },
-        { imgSrc: rest, link: 'https://google.com', type: 'earth1', name: 'KFCosmic', dietary: ['vegan'], favorite: true },
-        { imgSrc: rest8, link: 'https://google.com', type: 'earth1', name: 'FiveAliens', dietary: ['gluten-free'], favorite: false },
-        { imgSrc: rest3, link: 'https://google.com', type: 'earth1', name: 'Starbucks', dietary: ['gluten-free', 'vegetarian'], favorite: false },
-        { imgSrc: rest, link: 'https://google.com', type: 'earth1', name: 'Galactic Gourmet', dietary: ['vegan'], favorite: true },
-        { imgSrc: rest8, link: 'https://google.com', type: 'earth2', name: 'Asteroid Appetizers', dietary: ['gluten-free'], favorite: false },
-        { imgSrc: rest3, link: 'https://google.com', type: 'earth2', name: 'Alien Abode', dietary: ['gluten-free', 'vegetarian'], favorite: false },
-        { imgSrc: rest, link: 'https://google.com', type: 'earth2', name: 'Galactic Grains', dietary: ['vegan'], favorite: true },
-        { imgSrc: rest8, link: 'https://google.com', type: 'earth2', name: 'Planetary Patisserie', dietary: ['gluten-free'], favorite: false }
+        { imgSrc: coolone, link: '/restaurants', type: 'local', name: 'Galactic Grill & Tacos', dietary: ['vegan', 'gluten-free'], favorite: true },
+        { imgSrc: rest7, link: '/restaurants', type: 'local', name: 'Nebula Noodles', dietary: ['vegetarian'], favorite: false },
+        { imgSrc: rest2, link: '/restaurants', type: 'local', name: 'Stellar Sushi', dietary: ['gluten-free'], favorite: false },
+        { imgSrc: mcdon, link: '/restaurants', type: 'earth1', name: 'McGalaxy', dietary: ['gluten-free'], favorite: false },
+        { imgSrc: kfc, link: '/restaurants', type: 'earth1', name: 'KFCosmic', dietary: [], favorite: true },
+        { imgSrc: fiveguys, link: '/restaurants', type: 'earth', name: 'FiveAliens', dietary: ['gluten-free'], favorite: false },
+        { imgSrc: rest7, link: '/restaurants', type: 'interstellar', name: 'Pulsar Pizza', dietary: ['vegetarian'], favorite: false },
+        { imgSrc: rest2, link: '/restaurants', type: 'interstellar', name: 'Supernova Steak', dietary: [], favorite: true },
+        { imgSrc: rest3, link: '/restaurants', type: 'interstellar', name: 'Comet Café', dietary: ['vegan', 'vegetarian'], favorite: false },
+        { imgSrc: rest8, link: '/restaurants', type: 'local', name: 'Cosmic Curry', dietary: ['vegan'], favorite: true },
+        { imgSrc: rest7, link: '/restaurants', type: 'local', name: 'Meteorite Munchies', dietary: ['gluten-free'], favorite: false },
+        { imgSrc: rest3, link: '/restaurants', type: 'local', name: 'Planetary Pizza', dietary: ['vegetarian'], favorite: true },
+        { imgSrc: restf, link: '/restaurants', type: 'earth1', name: 'Starbucks', dietary: ['gluten-free', 'vegetarian'], favorite: false },
+        { imgSrc: rest, link: '/restaurants', type: 'earth1', name: 'Galactic Gourmet', dietary: ['vegan'], favorite: true },
+        { imgSrc: rest8, link: '/restaurants', type: 'earth2', name: 'Asteroid Appetizers', dietary: ['gluten-free'], favorite: false },
+        { imgSrc: rest7, link: '/restaurants', type: 'interstellar', name: 'Celestial Cuisine', dietary: ['vegetarian'], favorite: false },
+        { imgSrc: rest2, link: '/restaurants', type: 'interstellar', name: 'Quantum Quiche', dietary: [], favorite: true },
+        { imgSrc: rest3, link: '/restaurants', type: 'interstellar', name: 'Nebula Nibbles', dietary: ['vegan', 'vegetarian'], favorite: false },
+        { imgSrc: rest8, link: '/restaurants', type: 'local', name: 'Solar Sizzlers', dietary: ['vegan'], favorite: true },
+        { imgSrc: rest7, link: '/restaurants', type: 'local', name: 'Intergalactic Ice Cream', dietary: ['gluten-free'], favorite: false },
+        { imgSrc: rest2, link: '/restaurants', type: 'local', name: 'Comet Confections', dietary: ['vegetarian'], favorite: true },
+        { imgSrc: rest3, link: '/restaurants', type: 'earth2', name: 'Alien Abode', dietary: ['gluten-free', 'vegetarian'], favorite: false },
+        { imgSrc: rest2, link: '/restaurants', type: 'earth2', name: 'Galactic Grains', dietary: ['vegan'], favorite: true },
+        { imgSrc: rest8, link: '/restaurants', type: 'earth2', name: 'Planetary Patisserie', dietary: ['gluten-free'], favorite: false },
+        { imgSrc: rest7, link: '/restaurants', type: 'interstellar', name: 'Universal Udon', dietary: ['vegetarian'], favorite: false },
+        { imgSrc: rest2, link: '/restaurants', type: 'interstellar', name: 'Cosmic Café', dietary: [], favorite: true },
+        { imgSrc: rest3, link: '/restaurants', type: 'interstellar', name: 'Nebula Nosh', dietary: ['vegan', 'vegetarian'], favorite: false }
       ];
 
       const filteredBlocks = selectedFilter
@@ -82,11 +104,7 @@ function EarthPage() {
                 <option value="gluten-free">Gluten-Free</option>
               </select>
             </div>
-            <div className="favorites-toggle">
-              <button onClick={() => setShowFavorites(!showFavorites)}>
-                {showFavorites ? 'Show All' : 'Show Favorites'}
-              </button>
-            </div>
+
           </div>
           <div className="blocks-containerEarth">
             {finalBlocks.filter(block => block.type === 'earth1').slice(0, 4).map((block, index) => (

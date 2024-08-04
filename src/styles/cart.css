@@ -198,6 +198,7 @@ ul li::before {
   margin-right: 30px;
   color: #13111a;
   font-weight: bold;
+  margin-left: 15px;
 }
 
 .totals-container {
