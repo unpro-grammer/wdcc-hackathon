@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from '../styles/nav.module.css';
 import React from 'react';
-import logo from '../resources/images/navlogo.png';
+import logo from '../resources/images/navbarlogo.png';
 
 
 function Navbar() {
@@ -22,9 +22,7 @@ function Navbar() {
     <div className="App">
       <header className="App-header">
         <nav className={`${styles.navbar}`}>
-          <a href='/' className={`${styles.logo}`}>
-            <img src={logo} className={styles.logoImg} alt="Space Bites Logo" />
-          </a>
+          <img src={logo} className={styles.logoImg} alt="Space Bites Logo" />
           <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
             <li onClick={removeActive}>
               <a href='/' className={`${styles.navLink}`}>Home</a>
