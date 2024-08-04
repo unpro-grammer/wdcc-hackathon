@@ -15,9 +15,10 @@ body {
   padding: 20px;
 }
 
-.simple-page h1 {
-  text-align: center;
-  margin-right: 20px;
+.simple-page h1,
+h2 {
+  text-align: left;
+  margin-left: 90px;
 
 }
 
