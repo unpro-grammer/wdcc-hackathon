@@ -1,3 +1,8 @@
+* {
+  font-weight: bold;
+  font-family: 'Inconsolata', monospace;
+}
+
 .discover-nav {
   display: flex;
   flex-direction: column;
@@ -53,6 +58,10 @@
   overflow: hidden;
 }
 
+p {
+  margin-top: 10px;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -86,12 +95,16 @@ img {
 .search-input {
   flex: 1;
   padding: 10px;
-  border: 1px solid #ccc;
   border-radius: 10px;
+  background-color: #d9d0e7;
+  color:#342e40
 }
 
 .see-more-button {
+  color: white;
   background-color: #7A62BB;
+  border: none;
+  padding: 9px;
 }
 
 .see-more-button:hover {
@@ -99,13 +112,14 @@ img {
 }
 
 .h2 {
-  color: white;
+  color: #d9d0e7;
 }
 
 .favorites-toggle {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  color:#342e40;
 }
 
 .favorites-toggle button {
@@ -113,12 +127,12 @@ img {
   width: 200px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #d9d0e7;;
   cursor: pointer;
 }
 
 .favorites-toggle button:hover {
-  background-color: #f0f0f0;
+  background-color: #b9a3da;
 }
 
 /* discover.css */
@@ -137,7 +151,7 @@ img {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #d9d0e7;
   cursor: pointer;
 }
 
@@ -156,7 +170,7 @@ img {
 
 .food-type-header h2 {
   margin: 0;
-  color: white;
+  color: #d9d0e7;
   font-size: 2.5rem;
   margin-left: 45px;
 }
@@ -165,4 +179,27 @@ img {
   margin-left: auto;
   margin-right: 45px;
   /* Push the button to the right */
+}
+
+.filters {
+  margin-top: 10px;
+}
+
+.filters-dropdown {
+  background-color: #d9d0e7;
+  color:#342e40;
+}
+
+.filters select {
+  background-color: #d9d0e7;
+  color:#342e40;
+}
+
+.fave-button {
+  color:#342e40;
+  font-weight: bold;
+}
+
+.fave-button:hover {
+  background-color: #7A62BB;
 }
