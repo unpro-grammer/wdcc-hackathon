@@ -1,0 +1,10 @@
+.blocks-containerEarth{  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /* Align items from the left */
+    gap: 10px;
+    /* Add some space between blocks */
+    padding: 0 30px;
+    overflow-x: auto !important;
+  }

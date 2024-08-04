@@ -38,15 +38,15 @@ function EarthPage() {
 
     // Sample data
     const blocks1 = [
-        { imgSrc: rest3, link: '/restaurants', type: 'earth', name: 'McGalaxy', dietary: ['gluten-free', 'vegetarian'], favorite: false },
-        { imgSrc: rest, link: 'https://google.com', type: 'earth', name: 'KFCosmic', dietary: ['vegan'], favorite: true },
-        { imgSrc: rest8, link: 'https://google.com', type: 'earth', name: 'FiveAliens', dietary: ['gluten-free'], favorite: false },
-        { imgSrc: rest3, link: 'https://google.com', type: 'earth', name: 'Starbucks', dietary: ['gluten-free', 'vegetarian'], favorite: false },
-        { imgSrc: rest, link: 'https://google.com', type: 'earth', name: 'Galactic Gourmet', dietary: ['vegan'], favorite: true },
-        { imgSrc: rest8, link: 'https://google.com', type: 'earth', name: 'Asteroid Appetizers', dietary: ['gluten-free'], favorite: false },
-        { imgSrc: rest3, link: 'https://google.com', type: 'earth', name: 'Alien Abode', dietary: ['gluten-free', 'vegetarian'], favorite: false },
-        { imgSrc: rest, link: 'https://google.com', type: 'earth', name: 'Galactic Grains', dietary: ['vegan'], favorite: true },
-        { imgSrc: rest8, link: 'https://google.com', type: 'earth', name: 'Planetary Patisserie', dietary: ['gluten-free'], favorite: false }
+        { imgSrc: rest3, link: '/restaurants', type: 'earth1', name: 'McGalaxy', dietary: ['gluten-free', 'vegetarian'], favorite: false },
+        { imgSrc: rest, link: 'https://google.com', type: 'earth1', name: 'KFCosmic', dietary: ['vegan'], favorite: true },
+        { imgSrc: rest8, link: 'https://google.com', type: 'earth1', name: 'FiveAliens', dietary: ['gluten-free'], favorite: false },
+        { imgSrc: rest3, link: 'https://google.com', type: 'earth1', name: 'Starbucks', dietary: ['gluten-free', 'vegetarian'], favorite: false },
+        { imgSrc: rest, link: 'https://google.com', type: 'earth1', name: 'Galactic Gourmet', dietary: ['vegan'], favorite: true },
+        { imgSrc: rest8, link: 'https://google.com', type: 'earth2', name: 'Asteroid Appetizers', dietary: ['gluten-free'], favorite: false },
+        { imgSrc: rest3, link: 'https://google.com', type: 'earth2', name: 'Alien Abode', dietary: ['gluten-free', 'vegetarian'], favorite: false },
+        { imgSrc: rest, link: 'https://google.com', type: 'earth2', name: 'Galactic Grains', dietary: ['vegan'], favorite: true },
+        { imgSrc: rest8, link: 'https://google.com', type: 'earth2', name: 'Planetary Patisserie', dietary: ['gluten-free'], favorite: false }
       ];
 
       const filteredBlocks = selectedFilter
@@ -88,8 +88,20 @@ function EarthPage() {
               </button>
             </div>
           </div>
-          <div className="blocks-container">
-            {finalBlocks.filter(block => block.type === 'earth').slice(0, 4).map((block, index) => (
+          <div className="blocks-containerEarth">
+            {finalBlocks.filter(block => block.type === 'earth1').slice(0, 4).map((block, index) => (
+              <a href={block.link} key={index} className="block">
+                <div className="block-card">
+                  <div className="imgWrapper">
+                    <img src={block.imgSrc} alt={`Block ${index + 1}`} />
+                  </div>
+                  <p style={{ textAlign: 'center' }}>{block.name}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+          <div className="blocks-containerEarth">
+            {finalBlocks.filter(block => block.type === 'earth2').slice(0, 4).map((block, index) => (
               <a href={block.link} key={index} className="block">
                 <div className="block-card">
                   <div className="imgWrapper">
