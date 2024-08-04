@@ -40,6 +40,7 @@
   /* Add some space between blocks */
   background-color: red;
   padding: 0 30px;
+  overflow-x: hidden !important;
 }
 
 .block {
