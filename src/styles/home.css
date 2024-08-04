@@ -38,6 +38,7 @@
   margin-top: 0%;
   margin-left: -5%;
   margin-bottom: 50px;
+  margin-left: 3%;
   /* color: #ffffff; */
 }
 
@@ -53,7 +54,7 @@ body {
   width: 800px;
   height: 40px;
   /* margin-left: -5%; */
-  margin-left: 7%;
+  margin-left: 12.5%;
 }
 
 .search-form button {
@@ -83,11 +84,13 @@ body {
 
 
 .nav-cards {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* justify-content: space-evenly; */
+  gap: 5px;
   margin-top: 100px;
   margin-bottom: 50px;
+  margin-left: 7%;
   padding: 20px;
 
 }
@@ -135,4 +138,11 @@ body {
 
 .map-divider h2 {
   color: white;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+.pics {
+  width: 80px;
+  height: 72px;
 }

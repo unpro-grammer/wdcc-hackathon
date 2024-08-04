@@ -1,8 +1,8 @@
 import React from 'react';
-import localfood from '../resources/images/localfood.jpg';
-import earthfood from '../resources/images/earthfood.jpg';
-import interstellarfood from '../resources/images/interstellarfood.jpg';
-import galaxymap from '../resources/images/galaxymap.png';
+import localfood from '../resources/images/13.jpg';
+import earthfood from '../resources/images/14.jpg';
+import interstellarfood from '../resources/images/12.jpg';
+import galaxymap from '../resources/images/download.png';
 import '../styles/home.css';
 import { useState, useEffect } from 'react';
 import logo from '../assets/SpaceBites_logo__2.png'
@@ -59,7 +59,7 @@ const Home = () => {
         <a href="/discover">
           <div className="nav-card">
             <div className="imgWrapper">
-              <img src={localfood} alt="Local Food" />
+              <img class="pics" src={localfood} alt="Local Food" />
             </div>
             <h3>Local Food</h3>
             <p>Endulge in some of the finest local cuisine</p>
@@ -68,7 +68,7 @@ const Home = () => {
         <a href="/discover">
           <div className="nav-card">
             <div className="imgWrapper">
-              <img src={earthfood} alt="Earth Food" />
+              <img class="pics" src={earthfood} alt="Earth Food" />
             </div>
             <h3>Earth Food</h3>
             <p>Nostalgic food that makes you feel at home</p>
@@ -77,10 +77,10 @@ const Home = () => {
         <a href="/discover">
           <div className="nav-card">
             <div className="imgWrapper">
-              <img src={interstellarfood} alt="Interstellar Food" />
+              <img class="pics" src={interstellarfood} alt="Interstellar Food" />
             </div>
             <h3>Interstellar Food</h3>
-            <p>New and exciting eats</p>
+            <p>New and exciting eats from all around the galaxy</p>
           </div>
         </a>
       </div>
