@@ -6,7 +6,8 @@
 
 .home-container {
   line-height: 1.6;
-  background-image: url('../resources/images/homepageimghighres.png');
+  /* background-image: url('../resources/images/homepageimghighres.png'); */
+  background-image: url('/src/assets/Background\ image\ \(1\).png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,17 +20,26 @@
   color: #ffffff;
   padding: 20px;
   text-align: left;
-  margin: 0 auto;
-  margin-left: 20px;
+  /* margin: 0 auto; */
+  padding-top: 20px;
+  margin-left: 27%;
+
+}
+
+.home-contents img{
+  width: auto;
+  height: 80%;
+  margin-left: 10px;
 
 }
 
 .home-contents h1 {
-  color: white;
+  color: #d9d2e9;
   font-size: 3em;
-  margin-top: 20%;
-  margin-bottom: 20px;
-  color: #ffffff;
+  margin-top: 0%;
+  margin-left: -5%;
+  margin-bottom: 50px;
+  /* color: #ffffff; */
 }
 
 body {
@@ -41,7 +51,13 @@ body {
 .search-form {
   display: flex;
   margin-top: 10px;
-  width: 700px;
+  width: 800px;
+  height: 40px;
+  margin-left: -5%;
+}
+
+.search-form button {
+  margin-left: 20px;
 }
 
 .search-input {
