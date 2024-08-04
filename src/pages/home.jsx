@@ -28,7 +28,7 @@ const Home = () => {
     return (
     <div className="main-home">
       <div className="home-container">
-        <img src={logo} alt='logo'/>
+        <img src={logo} alt='logo' className='home-logo'/>
         <div className="home-contents">
           <h1>​{displayedText}</h1>
           <form className="search-form">
