@@ -30,7 +30,7 @@ const Home = () => {
         <div className="home-contents">
           <h1>​{displayedText}</h1>
           <form className="search-form">
-            <input type="text" placeholder="Search for food..." className="search-input" />
+            <input type="text" placeholder="Search for your craving..." className="search-input" />
             <button type="submit" className="search-button">Search</button>
           </form>
         </div>
