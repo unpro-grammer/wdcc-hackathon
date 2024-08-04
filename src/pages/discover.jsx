@@ -84,12 +84,14 @@ function DiscoverPage() {
           </button>
         </div>
       </div>
-      <h2>Local</h2>
-      {finalBlocks.filter(block => block.type === 'local').length > 4 && (
-        <Link to="/local">
-          <button>Show More</button>
-        </Link>
-      )}
+      <div className="food-type-header">
+        <h2>Local</h2>
+        {finalBlocks.filter(block => block.type === 'local').length > 4 && (
+          <Link to="/local">
+            <button>Show More</button>
+          </Link>
+        )}
+      </div>
       <div className="blocks-container">
         {finalBlocks.filter(block => block.type === 'local').slice(0, 4).map((block, index) => (
           <Link to={block.link} key={index} className="block">
@@ -103,12 +105,14 @@ function DiscoverPage() {
         ))}
       </div>
 
-      <h2>Earth</h2>
-      {finalBlocks.filter(block => block.type === 'earth').length > 4 && (
-        <Link to="/earth">
-          <button>Show More</button>
-        </Link>
-      )}
+      <div className="food-type-header">
+        <h2>Earth</h2>
+        {finalBlocks.filter(block => block.type === 'earth').length > 4 && (
+          <Link to="/earth">
+            <button>Show More</button>
+          </Link>
+        )}
+      </div>
       <div className="blocks-container">
         {finalBlocks.filter(block => block.type === 'earth').slice(0, 4).map((block, index) => (
           <a href={block.link} key={index} className="block">
@@ -121,13 +125,15 @@ function DiscoverPage() {
           </a>
         ))}
       </div>
+      <div className="food-type-header">
 
-      <h2>Interstellar</h2>
-      {finalBlocks.filter(block => block.type === 'interstellar').length > 4 && (
-        <Link to="/interstellar">
-          <button>Show More</button>
-        </Link>
-      )}
+        <h2>Interstellar</h2>
+        {finalBlocks.filter(block => block.type === 'interstellar').length > 4 && (
+          <Link to="/interstellar">
+            <button>Show More</button>
+          </Link>
+        )}
+      </div>
       <div className="blocks-container">
         {finalBlocks.filter(block => block.type === 'interstellar').slice(0, 4).map((block, index) => (
           <a href={block.link} key={index} className="block">

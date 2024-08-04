@@ -133,3 +133,25 @@ img {
 .filters select:focus {
   border-color: #aaa;
 }
+
+.food-type-header {
+  background-color: purple;
+}
+
+.food-type-header {
+  display: flex;
+  align-items: center;
+  /* Align items vertically centered */
+  justify-content: space-between;
+  /* Space out the items */
+}
+
+.food-type-header h2 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.food-type-header button {
+  margin-left: auto;
+  /* Push the button to the right */
+}
