@@ -1,26 +1,27 @@
-import { useState } from 'react'
-import './App.css'
-import Navbar from './components/nav'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './pages/home'
-import Discover from './pages/discover'
-import Resteraunts from  './pages/resteraunts'
-import Cart from './pages/cart'
-import Recipt from './pages/recipt'
-import Earth from './pages/earth'
-import { CartProvider } from './pages/cartContext';
-
+import { useState } from "react";
+import "./App.css";
+import Navbar from "./components/nav";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/home";
+import Discover from "./pages/discover";
+import Resteraunts from "./pages/resteraunts";
+import Cart from "./pages/cart";
+import Recipt from "./pages/recipt";
+import Earth from "./pages/earth";
+import { CartProvider } from "./pages/cartContext";
+import TitleBar from './components/titleBar';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-    <div className='BackgroundImage'>
-        <Navbar />
-        <div>
-          <CartProvider>
-            <BrowserRouter>
+      <TitleBar />
+      <Router>
+        <CartProvider>
+          <div className="BackgroundImage">
+            <Navbar />
+            <div>
               <Routes>
                 <Route index element={<Home />} />
                 <Route path="/home" element={<Home />} />
@@ -30,11 +31,11 @@ function App() {
                 <Route path="/receipt" element={<Recipt />} />
                 <Route path="/earth" element={<Earth />} />
               </Routes>
-            </BrowserRouter>
-          </CartProvider>
-        </div>
-      </div>
+            </div>
+          </div>
+        </CartProvider>
+      </Router>
     </>
-  )
+  );
 }
-export default App
+export default App;

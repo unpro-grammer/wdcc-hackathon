@@ -108,26 +108,26 @@ function EarthPage() {
           </div>
           <div className="blocks-containerEarth">
             {finalBlocks.filter(block => block.type === 'earth1').slice(0, 4).map((block, index) => (
-              <a href={block.link} key={index} className="block">
+              <Link to={block.link} key={index} className="block">
                 <div className="block-card">
                   <div className="imgWrapper">
                     <img src={block.imgSrc} alt={`Block ${index + 1}`} />
                   </div>
                   <p style={{ textAlign: 'center' }}>{block.name}</p>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
           <div className="blocks-containerEarth">
             {finalBlocks.filter(block => block.type === 'earth2').slice(0, 4).map((block, index) => (
-              <a href={block.link} key={index} className="block">
+              <Link to={block.link} key={index} className="block">
                 <div className="block-card">
                   <div className="imgWrapper">
                     <img src={block.imgSrc} alt={`Block ${index + 1}`} />
                   </div>
                   <p style={{ textAlign: 'center' }}>{block.name}</p>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

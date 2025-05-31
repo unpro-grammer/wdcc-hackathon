@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 // import '../styles/cart.css';
 import '../styles/resteraunts.css'; // Corrected typo
 import banner from '../resources/images/banner_that_one.png'; // Corrected typo
@@ -79,11 +79,11 @@ function RestaurantPage() {
 
             <div className="blocks-container5">
                 {blocks1.map((block, index) => (
-                    <a href={block.link} key={index} className="block5">
+                    <Link to={block.link} key={index} className="block5">
                         <div>
                             <img src={block.imgSrc} alt={`Block ${index + 1}`} />
                         </div>
-                    </a>
+                    </Link>
                 ))}
             </div>
 

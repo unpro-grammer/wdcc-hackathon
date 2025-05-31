@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styles from '../styles/nav.module.css';
 import React from 'react';
 import logo from '../resources/images/navbarlogo.png';
+import { Link } from 'react-router-dom';
 
 
 function Navbar() {
@@ -25,14 +26,13 @@ function Navbar() {
           <img src={logo} className={styles.logoImg} alt="Space Bites Logo" />
           <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
             <li onClick={removeActive}>
-              <a href='/' className={`${styles.navLink}`}>Home</a>
+              <Link to='/' className={styles.navLink}>Home</Link>
             </li>
             <li onClick={removeActive}>
-              <a href='/discover' className={`${styles.
-              Link}`}>Discover</a>
+              <Link to='/discover' className={styles.navLink}>Discover</Link>
             </li>
             <li onClick={removeActive}>
-              <a href='/cart' className={`${styles.navLink}`}>Cart</a>
+              <Link to='/cart' className={styles.navLink}>Cart</Link>
             </li>
           </ul>
         </nav>

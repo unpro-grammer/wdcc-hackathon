@@ -6,7 +6,7 @@ import galaxymap from '../resources/images/download.png';
 import '../styles/home.css';
 import { useState, useEffect } from 'react';
 import logo from '../assets/SpaceBites_logo__2.png'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Home = () => {
   const [displayedText, setDisplayedText] = useState('');
@@ -56,7 +56,7 @@ const Home = () => {
         </div>
       </div>
       <div className="nav-cards">
-        <a href="/discover">
+        <Link to="/discover">
           <div className="nav-card">
             <div className="imgWrapper">
               <img class="pics" src={localfood} alt="Local Food" />
@@ -64,8 +64,8 @@ const Home = () => {
             <h3>Local Food</h3>
             <p>Indulge in some of the finest local cuisine</p>
           </div>
-        </a>
-        <a href="/discover">
+        </Link>
+        <Link to="/discover">
           <div className="nav-card">
             <div className="imgWrapper">
               <img class="pics" src={earthfood} alt="Earth Food" />
@@ -73,8 +73,8 @@ const Home = () => {
             <h3>Earth Food</h3>
             <p>Nostalgic food that makes you feel at home</p>
           </div>
-        </a>
-        <a href="/discover">
+        </Link>
+        <Link to="/discover">
           <div className="nav-card">
             <div className="imgWrapper">
               <img class="pics" src={interstellarfood} alt="Interstellar Food" />
@@ -82,7 +82,7 @@ const Home = () => {
             <h3>Interstellar Food</h3>
             <p>New and exciting eats from all around the galaxy</p>
           </div>
-        </a>
+        </Link>
       </div>
       <div className="map-divider">
         <h2>Find bites near you:</h2>

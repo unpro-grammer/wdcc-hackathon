@@ -99,7 +99,7 @@ ul li {
     width: 28px;
     border-radius: 50%;
     
-    background-image: url(images/ring.jpg);
+    /* background-image: url(images/ring.jpg); */
     background-size: cover;
     background-position: center;
     

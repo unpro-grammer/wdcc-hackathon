@@ -120,14 +120,14 @@ function DiscoverPage() {
       </div>
       <div className="blocks-container">
         {finalBlocks.filter(block => block.type === 'earth').slice(0, 4).map((block, index) => (
-          <a href={block.link} key={index} className="block">
+          <Link to={block.link} key={index} className="block">
             <div className="block-card">
               <div className="imgWrapper">
                 <img src={block.imgSrc} alt={`Block ${index + 1}`} />
               </div>
               <p style={{ textAlign: 'center' }}>{block.name}</p>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
 
@@ -164,14 +164,14 @@ function DiscoverPage() {
       </div>
       <div className="blocks-container">
         {finalBlocks.filter(block => block.type === 'interstellar').slice(0, 4).map((block, index) => (
-          <a href={block.link} key={index} className="block">
+          <Link to={block.link} key={index} className="block">
             <div className="block-card">
               <div className="imgWrapper">
                 <img src={block.imgSrc} alt={`Block ${index + 1}`} />
               </div>
               <p style={{ textAlign: 'center' }}>{block.name}</p>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </div>
